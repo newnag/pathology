@@ -359,7 +359,7 @@ header{
                     display: none;
                     position: absolute;
                     top: 0;
-                    left: 100%;
+                    left: 95%;
                     width: max-content;
                     background-color: $green;
                     border-radius: 0 10px 10px 0;
@@ -547,31 +547,167 @@ header{
 main{
   min-height: calc(100vh - 91px);
   margin-top: 91px;
-}
 
-aside{
-  .aside{
+  section.page{
     position: relative;
 
-    .left{
-      position: fixed;
-      bottom: 10px;
-      left: 50px;
-      width: max-content;
-      height: max-content;
-      z-index: 6;
+    aside{
+      .aside-left{
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 230px;
+        height: 100%;
+        transition: .3s ease-in-out;
 
-      .nav-menu{
-        display: flex;
-        flex-direction: column;
+        @media screen and (min-width:$xxl){
+          left: 2%;
+        }
+        @media screen and (min-width:$wide){
+          left: 7%;
+        }
 
-        a{
+        &.show{
+          left: 2%;
+        }
+
+        .left{
+          position: sticky;
+          top: 110px;
+          left: 7%;
+          width: 100%;
+          height: max-content;
+          z-index: 5;
+          display: inline-block;
+          background-color: #000000db;
+          padding: 1em;
+
+          @media screen and (min-width:$xxl){
+            background-color: $white;
+          }
+    
+          .nav-menu{
+            display: flex;
+            flex-direction: column;
+    
+            a{
+              color: $white;
+              background: linear-gradient($green,$lightgreen);
+              border-radius: 5px;
+              padding: .5em 2em;
+              text-align: center;
+              margin: .5em 0;
+            }
+          }
+
+          .facebook{
+            width: 100%;
+          }
+        }
+      }
+
+      .aside-right{
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 230px;
+        height: 100%;
+        transition: .3s ease-in-out;
+
+        @media screen and (min-width:$xxl){
+          left: unset;
+          right: 2%;
+        }
+        @media screen and (min-width:$wide){
+          right: 7%;
+        }
+
+        &.show{
+          right: 2%;
+        }
+
+        .right{
+          position: sticky;
+          top: 110px;
+          right: 7%;
+          width: 100%;
+          height: max-content;
+          z-index: 5;
+          display: inline-block;
+          background-color: #000000db;
+          padding: 1em;
+
+          @media screen and (min-width:$xxl){
+            background-color: $white;
+          }
+
+          .book{
+            margin-bottom: 2em;
+
+            img{
+              width: 100%;
+            }
+          }
+    
+          .nav-menu{
+            display: flex;
+            flex-direction: column;
+    
+            a{
+              color: $white;
+              background: linear-gradient($green,$lightgreen);
+              border-radius: 5px;
+              padding: .5em 2em;
+              text-align: center;
+              margin: .5em 0;
+            }
+          }
+        }
+      }
+
+      .button-aside{
+        position: fixed;
+        top: 400px;
+        width: max-content;
+        height: max-content;
+
+        @media screen and (min-width:$xl){
+          top: unset;
+          bottom: 200px;
+        }
+        @media screen and (min-width:$xxl){
+          display: none;
+        }
+
+        &.left{
+          left: 30px;
+          transition: .3s ease-in-out;
+
+          &.show{
+            left: 22%;
+          }
+        }
+        &.right{
+          right: 30px;
+          transition: .3s ease-in-out;
+
+          &.show{
+            right: 22%;
+          }
+        }
+
+        i{
+          background-color: $orange;
           color: $white;
-          background: linear-gradient($green,$lightgreen);
-          border-radius: 5px;
-          padding: .5em;
-          text-align: center;
-          margin: .5em 0;
+          width: 50px;
+          height: 50px;
+          border: 1px solid $white;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          font-size: 1.4em;
         }
       }
     }

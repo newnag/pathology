@@ -29,14 +29,6 @@
   }
 }
 
-@media screen and (min-width: 1280px) {
-  .homepage .cover {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-  }
-}
-
 @media screen and (min-width: 768px) {
   .homepage .news {
     margin: 2em 3em;
@@ -53,9 +45,6 @@
   .homepage .news {
     margin: 2em auto;
     width: 1016px;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
     background: #fff;
   }
 }
@@ -170,6 +159,13 @@
   transition: .3s ease-in-out;
 }
 
+.homepage .about-zone {
+  background: -webkit-gradient(linear, left top, left bottom, from(#1A921A), to(#56921A));
+  background: linear-gradient(#1A921A, #56921A);
+  text-align: center;
+  padding: 2em;
+}
+
 @media screen and (min-width: 768px) {
   .homepage .about-zone {
     margin: 0 3em;
@@ -188,18 +184,7 @@
   .homepage .about-zone {
     margin: 2em auto;
     width: 1016px;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    background: #fff;
   }
-}
-
-.homepage .about-zone .box {
-  background: -webkit-gradient(linear, left top, left bottom, from(#1A921A), to(#56921A));
-  background: linear-gradient(#1A921A, #56921A);
-  text-align: center;
-  padding: 2em;
 }
 
 .homepage .about-zone h1, .homepage .about-zone p {
@@ -238,9 +223,6 @@
   .homepage .video-present {
     margin: 2em auto;
     width: 1016px;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
     background: #fff;
   }
 }
@@ -305,9 +287,6 @@
   .homepage .research {
     margin: 0 auto;
     width: 1016px;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
     background: #fff;
   }
 }
@@ -510,9 +489,6 @@
   .homepage .job {
     margin: 0 auto;
     width: 1016px;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
   }
 }
 

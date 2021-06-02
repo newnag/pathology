@@ -60,6 +60,14 @@ function slide_home(){
   });
 }
 
+// เปิดเมนูด้านข้าง
+function open_aside(side){
+   let aside = `aside-${side}`
+
+   document.querySelector(`.page aside .${aside}`).classList.toggle('show')
+   document.querySelector(`.page aside .button-aside.${side}`).classList.toggle('show')
+}
+
 ///////////////////////////////////////////////////////////////////
 // @use function
 
