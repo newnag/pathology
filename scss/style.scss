@@ -319,50 +319,92 @@ header{
               left: 0;
               width: max-content;
               height: max-content;
-              background-color: $green;
+              background-color: $white;
               border-radius: 0 0 10px 10px;
               transition: .3s ease-in-out;
-              padding: .5em;
 
               >li{
                 width: 100%;
+                padding: .25em .5em;
+                margin: 0;
 
                 @media (hover:hover){
                   &:hover{
+                    background-color: $green;
+
+                    a{
+                      color: $white;
+                    }
+
                     .insubmenu1{
                       display: block;
                     }
                   }
                 }
 
+                a{
+                  color: $green;
+                }
+
                 .insubmenu1{
                   display: none;
                   position: absolute;
                   top: 0;
-                  left: 101%;
+                  left: 100%;
                   width: max-content;
-                  background-color: $green;
-                  border-radius: 0 0 0 10px;
+                  background-color: $white;
+                  border-radius: 5px 0 0 5px;
   
                   >li{
                     width: 100%;
+                    padding: .25em .5em;
+                    margin: 0;
 
                     @media (hover:hover){
                       &:hover{
+                        background: $green;
+
+                        a{
+                          color: $white;
+                        }
+
                         .insubmenu2{
                           display: block;
                         }
                       }
+                    }
+
+                    a{
+                      color: $green;
                     }
                   }
                   .insubmenu2{
                     display: none;
                     position: absolute;
                     top: 0;
-                    left: 95%;
+                    left: 100%;
                     width: max-content;
-                    background-color: $green;
+                    background-color: $white;
                     border-radius: 0 10px 10px 0;
+
+                    li{
+                      padding: .25em .5em;
+                      margin: 0;
+
+                      @media (hover:hover){
+                        &:hover{
+                          background: $green;
+
+                          a{
+                            color: $white;
+                          }
+                        }
+                      }
+
+                      a{
+                        color: $green;
+                      }
+                    }
                   }
                 }
               }
@@ -553,13 +595,24 @@ main{
 
     aside{
       .aside-left{
-        position: absolute;
-        top: 0;
+        position: fixed;
+        top: 100px;
         left: -100%;
         width: 230px;
-        height: 100%;
+        height: max-content;
         transition: .3s ease-in-out;
+        z-index: 5;
 
+        @media screen and (min-width:$md){
+          top: 100px;
+        }
+        @media screen and (min-width:$lg){
+          position: absolute;
+          top: 0;
+        }
+        @media screen and (min-width:$xl){
+          height: 100%;
+        }
         @media screen and (min-width:$xxl){
           left: 2%;
         }
@@ -576,27 +629,86 @@ main{
           top: 110px;
           left: 7%;
           width: 100%;
-          height: max-content;
+          height: 550px;
           z-index: 5;
           display: inline-block;
           background-color: #000000db;
           padding: 1em;
+          overflow-y: auto;
 
-          @media screen and (min-width:$xxl){
+          @media screen and (min-width:$md){
+            height: max-content;
+          }
+          @media screen and (min-width:$xl){
             background-color: $white;
+            //height: 550px;
+          }
+          @media screen and (min-width:$xxl){
+            overflow-y: unset;
+            height: max-content;
           }
     
           .nav-menu{
             display: flex;
             flex-direction: column;
+            background-color: #000000db;
+
+            @media screen and (min-width:$xl){
+              background-color: $white;
+            }
     
-            a{
-              color: $white;
+            >li{
               background: linear-gradient($green,$lightgreen);
               border-radius: 5px;
-              padding: .5em 2em;
+              padding: .5em 1.5em;
               text-align: center;
               margin: .5em 0;
+              list-style: none;
+              color: $white;
+              cursor: pointer;
+              position: relative;
+              border: 2px solid $green;
+              border-radius: 5px;
+              transition: .3s ease-in-out;
+
+              @media (hover:hover){
+                &:hover{
+                  background: $white;
+                  color: $green;
+
+                  .submenu{
+                    left: 103%;
+                  }
+                }
+              }
+
+              .submenu{
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                transition: .3s ease-in-out;
+                background: linear-gradient($green,$lightgreen);
+                width: max-content;
+                padding: 1em;
+                height: max-content;
+                border-radius: 10px;
+
+                li{
+                  list-style-position: inside;
+                  color: $white;
+
+                  a{
+                    transition: .1s ease-in-out;
+
+                    @media (hover:hover){
+                      &:hover{
+                        color: $orange;
+                      }
+                    }
+                  }
+                }
+              }
             }
           }
 
@@ -667,12 +779,12 @@ main{
 
       .button-aside{
         position: fixed;
-        top: 400px;
+        bottom: 20px;
         width: max-content;
         height: max-content;
+        z-index: 4;
 
         @media screen and (min-width:$xl){
-          top: unset;
           bottom: 200px;
         }
         @media screen and (min-width:$xxl){
@@ -684,7 +796,9 @@ main{
           transition: .3s ease-in-out;
 
           &.show{
-            left: 22%;
+            @media screen and (min-width:$xl){
+              left: 22%;
+            }
           }
         }
         &.right{
@@ -692,7 +806,9 @@ main{
           transition: .3s ease-in-out;
 
           &.show{
-            right: 22%;
+            @media screen and (min-width:$xl){
+              right: 22%;
+            }
           }
         }
 

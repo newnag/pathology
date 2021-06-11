@@ -418,57 +418,97 @@ header .header .logo {
     height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
-    background-color: #1A921A;
+    background-color: #fff;
     border-radius: 0 0 10px 10px;
     -webkit-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
-    padding: .5em;
   }
   header .header nav .menu li .submenu > li {
     width: 100%;
+    padding: .25em .5em;
+    margin: 0;
   }
 }
 
 @media screen and (min-width: 1280px) and (hover: hover) {
+  header .header nav .menu li .submenu > li:hover {
+    background-color: #1A921A;
+  }
+  header .header nav .menu li .submenu > li:hover a {
+    color: #fff;
+  }
   header .header nav .menu li .submenu > li:hover .insubmenu1 {
     display: block;
   }
 }
 
 @media screen and (min-width: 1280px) {
+  header .header nav .menu li .submenu > li a {
+    color: #1A921A;
+  }
   header .header nav .menu li .submenu > li .insubmenu1 {
     display: none;
     position: absolute;
     top: 0;
-    left: 101%;
+    left: 100%;
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
-    background-color: #1A921A;
-    border-radius: 0 0 0 10px;
+    background-color: #fff;
+    border-radius: 5px 0 0 5px;
   }
   header .header nav .menu li .submenu > li .insubmenu1 > li {
     width: 100%;
+    padding: .25em .5em;
+    margin: 0;
   }
 }
 
 @media screen and (min-width: 1280px) and (hover: hover) {
+  header .header nav .menu li .submenu > li .insubmenu1 > li:hover {
+    background: #1A921A;
+  }
+  header .header nav .menu li .submenu > li .insubmenu1 > li:hover a {
+    color: #fff;
+  }
   header .header nav .menu li .submenu > li .insubmenu1 > li:hover .insubmenu2 {
     display: block;
   }
 }
 
 @media screen and (min-width: 1280px) {
+  header .header nav .menu li .submenu > li .insubmenu1 > li a {
+    color: #1A921A;
+  }
   header .header nav .menu li .submenu > li .insubmenu1 .insubmenu2 {
     display: none;
     position: absolute;
     top: 0;
-    left: 95%;
+    left: 100%;
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
-    background-color: #1A921A;
+    background-color: #fff;
     border-radius: 0 10px 10px 0;
+  }
+  header .header nav .menu li .submenu > li .insubmenu1 .insubmenu2 li {
+    padding: .25em .5em;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 1280px) and (hover: hover) {
+  header .header nav .menu li .submenu > li .insubmenu1 .insubmenu2 li:hover {
+    background: #1A921A;
+  }
+  header .header nav .menu li .submenu > li .insubmenu1 .insubmenu2 li:hover a {
+    color: #fff;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  header .header nav .menu li .submenu > li .insubmenu1 .insubmenu2 li a {
+    color: #1A921A;
   }
   header .header nav .menu > li:hover .submenu {
     top: 100%;
@@ -696,13 +736,35 @@ main section.page {
 }
 
 main section.page aside .aside-left {
-  position: absolute;
-  top: 0;
+  position: fixed;
+  top: 100px;
   left: -100%;
   width: 230px;
-  height: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
+  z-index: 5;
+}
+
+@media screen and (min-width: 768px) {
+  main section.page aside .aside-left {
+    top: 100px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  main section.page aside .aside-left {
+    position: absolute;
+    top: 0;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  main section.page aside .aside-left {
+    height: 100%;
+  }
 }
 
 @media screen and (min-width: 1536px) {
@@ -727,18 +789,34 @@ main section.page aside .aside-left .left {
   top: 110px;
   left: 7%;
   width: 100%;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
+  height: 550px;
   z-index: 5;
   display: inline-block;
   background-color: #000000db;
   padding: 1em;
+  overflow-y: auto;
+}
+
+@media screen and (min-width: 768px) {
+  main section.page aside .aside-left .left {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  main section.page aside .aside-left .left {
+    background-color: #fff;
+  }
 }
 
 @media screen and (min-width: 1536px) {
   main section.page aside .aside-left .left {
-    background-color: #fff;
+    overflow-y: unset;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
   }
 }
 
@@ -750,16 +828,75 @@ main section.page aside .aside-left .left .nav-menu {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-color: #000000db;
 }
 
-main section.page aside .aside-left .left .nav-menu a {
-  color: #fff;
+@media screen and (min-width: 1280px) {
+  main section.page aside .aside-left .left .nav-menu {
+    background-color: #fff;
+  }
+}
+
+main section.page aside .aside-left .left .nav-menu > li {
   background: -webkit-gradient(linear, left top, left bottom, from(#1A921A), to(#56921A));
   background: linear-gradient(#1A921A, #56921A);
   border-radius: 5px;
-  padding: .5em 2em;
+  padding: .5em 1.5em;
   text-align: center;
   margin: .5em 0;
+  list-style: none;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  border: 2px solid #1A921A;
+  border-radius: 5px;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+@media (hover: hover) {
+  main section.page aside .aside-left .left .nav-menu > li:hover {
+    background: #fff;
+    color: #1A921A;
+  }
+  main section.page aside .aside-left .left .nav-menu > li:hover .submenu {
+    left: 103%;
+  }
+}
+
+main section.page aside .aside-left .left .nav-menu > li .submenu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  background: -webkit-gradient(linear, left top, left bottom, from(#1A921A), to(#56921A));
+  background: linear-gradient(#1A921A, #56921A);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 1em;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  border-radius: 10px;
+}
+
+main section.page aside .aside-left .left .nav-menu > li .submenu li {
+  list-style-position: inside;
+  color: #fff;
+}
+
+main section.page aside .aside-left .left .nav-menu > li .submenu li a {
+  -webkit-transition: .1s ease-in-out;
+  transition: .1s ease-in-out;
+}
+
+@media (hover: hover) {
+  main section.page aside .aside-left .left .nav-menu > li .submenu li a:hover {
+    color: #F46608;
+  }
 }
 
 main section.page aside .aside-left .left .facebook {
@@ -844,18 +981,18 @@ main section.page aside .aside-right .right .nav-menu a {
 
 main section.page aside .button-aside {
   position: fixed;
-  top: 400px;
+  bottom: 20px;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
+  z-index: 4;
 }
 
 @media screen and (min-width: 1280px) {
   main section.page aside .button-aside {
-    top: unset;
     bottom: 200px;
   }
 }
@@ -872,8 +1009,10 @@ main section.page aside .button-aside.left {
   transition: .3s ease-in-out;
 }
 
-main section.page aside .button-aside.left.show {
-  left: 22%;
+@media screen and (min-width: 1280px) {
+  main section.page aside .button-aside.left.show {
+    left: 22%;
+  }
 }
 
 main section.page aside .button-aside.right {
@@ -882,8 +1021,10 @@ main section.page aside .button-aside.right {
   transition: .3s ease-in-out;
 }
 
-main section.page aside .button-aside.right.show {
-  right: 22%;
+@media screen and (min-width: 1280px) {
+  main section.page aside .button-aside.right.show {
+    right: 22%;
+  }
 }
 
 main section.page aside .button-aside i {
