@@ -53,6 +53,9 @@ function open_langList(that){
 function slide_home(){
   const swiper = new Swiper('.swiper-container', {
     loop: true,
+    autoplay: {
+      delay: 5000,
+    },
 
     pagination: {
       el: '.swiper-pagination',

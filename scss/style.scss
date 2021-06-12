@@ -115,6 +115,15 @@ a{
     background: $white;
   }
 
+  &.select{
+    height: 35px;
+    width: 100%;
+    border: 1px solid $gray;
+    border-radius: 5px;
+    padding: 5px 10px 5px 5px;
+    background: $white;
+  }
+
   &.textarea{
     height: 100%;
     width: 100%;
@@ -587,7 +596,7 @@ header{
 }
 
 main{
-  min-height: calc(100vh - 91px);
+  min-height: calc(100vh - 91px + 560px);
   margin-top: 91px;
 
   section.page{
@@ -633,7 +642,7 @@ main{
           z-index: 5;
           display: inline-block;
           background-color: #000000db;
-          padding: 1em;
+          padding: 0 1em;
           overflow-y: auto;
 
           @media screen and (min-width:$md){
@@ -747,7 +756,7 @@ main{
           z-index: 5;
           display: inline-block;
           background-color: #000000db;
-          padding: 1em;
+          padding: 0 1em;
 
           @media screen and (min-width:$xxl){
             background-color: $white;

@@ -1,4 +1,4 @@
-.coursepage .cover {
+.cover {
   position: relative;
   margin: 1em auto;
   display: -webkit-box;
@@ -13,18 +13,25 @@
 }
 
 @media screen and (min-width: 768px) {
-  .coursepage .cover {
-    margin: 1em 3em;
+  .cover {
+    margin: 2em 3em;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .coursepage .cover {
-    margin: 1em auto;
+  .cover {
+    margin: 2em 8em;
   }
 }
 
-.coursepage .cover .head-title {
+@media screen and (min-width: 1280px) {
+  .cover {
+    margin: 2em auto;
+    width: 1016px;
+  }
+}
+
+.cover .head-title {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -34,11 +41,819 @@
   height: max-content;
 }
 
-.coursepage .cover .head-title h1 {
+.cover .head-title h1 {
   color: #fff;
   background: #1a921aad;
   font-size: 1em;
   text-align: center;
   padding: 0.25em 0;
+  text-shadow: 2px 2px 3px #0000007a;
+}
+
+@media screen and (min-width: 600px) {
+  .cover .head-title h1 {
+    font-size: 1.4em;
+  }
+}
+
+.coursepage .box-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  grid-row-gap: 1em;
+  margin: 1em auto;
+}
+
+@media screen and (min-width: 768px) {
+  .coursepage .box-content {
+    margin: 2em 3em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .coursepage .box-content {
+    margin: 2em 8em;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .coursepage .box-content {
+    margin: 2em auto;
+    width: 1016px;
+  }
+}
+
+.coursepage .box-content .content {
+  padding: 1em;
+  background: #f6f6f6;
+  border-radius: 10px;
+}
+
+.coursepage .box-content .content .head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+  margin-bottom: 1em;
+}
+
+.coursepage .box-content .content .head.collaps .collap {
+  color: #1A921A;
+}
+
+.coursepage .box-content .content .head .txt h2 {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+.coursepage .box-content .content .head .collap {
+  color: #A7A7A7;
+  font-size: .8em;
+  -webkit-transition: .1s ease-in-out;
+  transition: .1s ease-in-out;
+}
+
+.coursepage .box-content .content .ck {
+  max-height: 300px;
+  overflow: hidden;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+.coursepage .box-content .content .ck.collap {
+  max-height: 0;
+}
+
+.coursepage .box-content .content .ck p img {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .studentpage .select-type, .alumnipage .select-type, .trainypage .select-type {
+    margin: 0 3em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .studentpage .select-type, .alumnipage .select-type, .trainypage .select-type {
+    margin: 0 8em;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .studentpage .select-type, .alumnipage .select-type, .trainypage .select-type {
+    margin: 2em auto;
+    width: 1016px;
+  }
+}
+
+.studentpage .select-type .tab, .alumnipage .select-type .tab, .trainypage .select-type .tab {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .studentpage .select-type .tab, .alumnipage .select-type .tab, .trainypage .select-type .tab {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.studentpage .select-type .tab .type, .alumnipage .select-type .tab .type, .trainypage .select-type .tab .type {
+  background: #A7A7A7;
+  color: #fff;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: .5em 1em;
+  margin: 10px 10px 10px 0;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 1024px) {
+  .studentpage .select-type .tab .type, .alumnipage .select-type .tab .type, .trainypage .select-type .tab .type {
+    padding: .5em 2.5em;
+  }
+}
+
+.studentpage .select-type .tab .type.active, .alumnipage .select-type .tab .type.active, .trainypage .select-type .tab .type.active {
+  background: -webkit-gradient(linear, left top, left bottom, from(#1A921A), to(#56921A));
+  background: linear-gradient(#1A921A, #56921A);
+}
+
+.studentpage .select-type .select-box, .alumnipage .select-type .select-box, .trainypage .select-type .select-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 1em 0;
+}
+
+.studentpage .select-type .select-box label, .alumnipage .select-type .select-box label, .trainypage .select-type .select-box label {
+  color: #A7A7A7;
+}
+
+.studentpage .select-type .select-box select, .alumnipage .select-type .select-box select, .trainypage .select-type .select-box select {
+  width: 250px;
+  margin-left: 10px;
+}
+
+.studentpage .grid-student, .alumnipage .grid-student, .trainypage .grid-student {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  grid-row-gap: 4em;
+  margin: 1em auto;
+}
+
+@media screen and (min-width: 768px) {
+  .studentpage .grid-student, .alumnipage .grid-student, .trainypage .grid-student {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 1em;
+    margin: 0 3em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .studentpage .grid-student, .alumnipage .grid-student, .trainypage .grid-student {
+    margin: 0 8em;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .studentpage .grid-student, .alumnipage .grid-student, .trainypage .grid-student {
+    margin: 2em auto;
+    width: 1016px;
+  }
+}
+
+.studentpage .grid-student .box, .alumnipage .grid-student .box, .trainypage .grid-student .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.studentpage .grid-student .box figure, .alumnipage .grid-student .box figure, .trainypage .grid-student .box figure {
+  width: 160px;
+  height: 230px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.studentpage .grid-student .box figure img, .alumnipage .grid-student .box figure img, .trainypage .grid-student .box figure img {
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.studentpage .grid-student .box .detail, .alumnipage .grid-student .box .detail, .trainypage .grid-student .box .detail {
+  width: calc(100% - 160px);
+  padding-left: .5em;
+}
+
+@media screen and (min-width: 1024px) {
+  .studentpage .grid-student .box .detail, .alumnipage .grid-student .box .detail, .trainypage .grid-student .box .detail {
+    padding-left: 2em;
+  }
+}
+
+.studentpage .grid-student .box .detail .name, .alumnipage .grid-student .box .detail .name, .trainypage .grid-student .box .detail .name {
+  text-align: center;
+  border-bottom: 1px dashed #A7A7A7;
+  padding-bottom: .5em;
+}
+
+.studentpage .grid-student .box .detail .name p:first-child, .alumnipage .grid-student .box .detail .name p:first-child, .trainypage .grid-student .box .detail .name p:first-child {
+  font-weight: 500;
+  font-size: 1.2em;
+}
+
+.studentpage .grid-student .box .detail .education, .alumnipage .grid-student .box .detail .education, .trainypage .grid-student .box .detail .education {
+  text-align: center;
+  padding-top: .5em;
+}
+
+.studentpage .grid-student .box .detail .education p, .alumnipage .grid-student .box .detail .education p, .trainypage .grid-student .box .detail .education p {
+  font-size: 1.1em;
+  font-weight: 500;
+  color: #A7A7A7;
+}
+
+.studentpage .grid-student .box .detail .id-no, .studentpage .grid-student .box .detail .email, .alumnipage .grid-student .box .detail .id-no, .alumnipage .grid-student .box .detail .email, .trainypage .grid-student .box .detail .id-no, .trainypage .grid-student .box .detail .email {
+  margin: .5em 0;
+}
+
+.studentpage .grid-student .box .detail .id-no p, .studentpage .grid-student .box .detail .email p, .alumnipage .grid-student .box .detail .id-no p, .alumnipage .grid-student .box .detail .email p, .trainypage .grid-student .box .detail .id-no p, .trainypage .grid-student .box .detail .email p {
+  color: lightgray;
+  font-size: .9em;
+}
+
+.studentpage .pagination, .alumnipage .pagination, .trainypage .pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin: 1em auto;
+  border-top: 1px solid #1A921A;
+  padding-top: 1em;
+}
+
+@media screen and (min-width: 768px) {
+  .studentpage .pagination, .alumnipage .pagination, .trainypage .pagination {
+    margin: 1em 3em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .studentpage .pagination, .alumnipage .pagination, .trainypage .pagination {
+    margin: 1em 8em;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .studentpage .pagination, .alumnipage .pagination, .trainypage .pagination {
+    margin: 2em auto;
+    width: 1016px;
+  }
+}
+
+.studentpage .pagination li, .alumnipage .pagination li, .trainypage .pagination li {
+  list-style: none;
+  padding: 0 .5em;
+}
+
+.studentpage .pagination .page, .alumnipage .pagination .page, .trainypage .pagination .page {
+  border-right: 1px solid #000;
+}
+
+.studentpage .pagination .page.current, .alumnipage .pagination .page.current, .trainypage .pagination .page.current {
+  color: #1A921A;
+}
+
+.studentpage .pagination .page.current a, .alumnipage .pagination .page.current a, .trainypage .pagination .page.current a {
+  border-bottom: 2px solid #1A921A;
+  font-weight: 600;
+}
+
+.alumnipage .grid-alumni, .trainypage .grid-alumni {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  grid-row-gap: 4em;
+  margin: 1em auto;
+}
+
+@media screen and (min-width: 600px) {
+  .alumnipage .grid-alumni, .trainypage .grid-alumni {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .alumnipage .grid-alumni, .trainypage .grid-alumni {
+    margin: 1em 3em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .alumnipage .grid-alumni, .trainypage .grid-alumni {
+    margin: 1em 8em;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .alumnipage .grid-alumni, .trainypage .grid-alumni {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    margin: 2em auto;
+    width: 1016px;
+  }
+}
+
+.alumnipage .grid-alumni .box figure, .trainypage .grid-alumni .box figure {
+  width: 160px;
+  height: 230px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+}
+
+.alumnipage .grid-alumni .box figure img, .trainypage .grid-alumni .box figure img {
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.alumnipage .grid-alumni .box .detail, .trainypage .grid-alumni .box .detail {
+  text-align: center;
+  margin-top: 1em;
+}
+
+.alumnipage .grid-alumni .box .detail .name, .trainypage .grid-alumni .box .detail .name {
+  text-align: center;
+  border-bottom: 1px dashed #A7A7A7;
+  padding-bottom: .5em;
+}
+
+.alumnipage .grid-alumni .box .detail .name p:first-child, .trainypage .grid-alumni .box .detail .name p:first-child {
+  font-weight: 500;
+  font-size: 1.2em;
+}
+
+.alumnipage .grid-alumni .box .detail .education, .trainypage .grid-alumni .box .detail .education {
+  text-align: center;
+  padding-top: .5em;
+}
+
+.alumnipage .grid-alumni .box .detail .education p, .trainypage .grid-alumni .box .detail .education p {
+  font-size: 1.1em;
+  font-weight: 500;
+  color: #A7A7A7;
+}
+
+@media screen and (min-width: 1024px) {
+  .trainypage .select-type .tab {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.trainingpage .income-train {
+  background: -webkit-gradient(linear, left top, left bottom, from(#1A921A), to(#56921A));
+  background: linear-gradient(#1A921A, #56921A);
+  border-radius: 10px;
+  padding: 1em;
+}
+
+@media screen and (min-width: 768px) {
+  .trainingpage .income-train {
+    margin: 2em 3em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .trainingpage .income-train {
+    margin: 2em 8em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: relative;
+    background: unset;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .trainingpage .income-train {
+    margin: 2em auto;
+    width: 1016px;
+  }
+}
+
+.trainingpage .income-train .left {
+  border-bottom: 1px solid #fff;
+  padding-bottom: 1em;
+}
+
+@media screen and (min-width: 1024px) {
+  .trainingpage .income-train .left {
+    width: 40%;
+    border-bottom: unset;
+    border-right: 1px solid #fff;
+    padding-bottom: 0;
+  }
+}
+
+.trainingpage .income-train .left > p {
+  font-size: 2em;
+  color: #fff;
+}
+
+@media screen and (min-width: 1024px) {
+  .trainingpage .income-train .left > p {
+    font-size: 1.8em;
+  }
+}
+
+.trainingpage .income-train .left .more-detail {
+  margin: 2em 0;
+}
+
+.trainingpage .income-train .left .more-detail a button {
+  color: #1A921A;
+}
+
+.trainingpage .income-train .left .date, .trainingpage .income-train .left .post, .trainingpage .income-train .left .by {
+  margin: 1em 0;
+}
+
+.trainingpage .income-train .left .date p, .trainingpage .income-train .left .post p, .trainingpage .income-train .left .by p {
+  color: #fff;
+}
+
+.trainingpage .income-train .left .date p i, .trainingpage .income-train .left .post p i, .trainingpage .income-train .left .by p i {
+  margin-right: 5px;
+}
+
+.trainingpage .income-train .right {
+  padding-top: 1em;
+}
+
+@media screen and (min-width: 1024px) {
+  .trainingpage .income-train .right {
+    width: 58%;
+    padding-top: 0;
+  }
+}
+
+.trainingpage .income-train .right .title p {
+  color: #fff;
+  font-size: 2em;
+  height: 4.8em;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 1024px) {
+  .trainingpage .income-train .right .title p {
+    font-size: 1.6em;
+  }
+}
+
+@media screen and (min-width: 1536px) {
+  .trainingpage .income-train .right .title p {
+    height: 3.1em;
+  }
+}
+
+.trainingpage .income-train .right .content {
+  margin-top: 1em;
+}
+
+.trainingpage .income-train .right .content p {
+  color: #fff;
+}
+
+@media screen and (min-width: 1024px) {
+  .trainingpage .income-train .right .content p {
+    height: 9em;
+    overflow: hidden;
+  }
+}
+
+.trainingpage .income-train .bg {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+@media screen and (min-width: 1024px) {
+  .trainingpage .income-train .bg {
+    display: block;
+  }
+}
+
+.trainingpage .income-train .bg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  opacity: 0.5;
+}
+
+.trainingpage .income-train .bg:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #1a921ab6;
+  border-radius: 10px;
+}
+
+.trainingpage .other-train {
+  margin: 1em auto;
+}
+
+@media screen and (min-width: 768px) {
+  .trainingpage .other-train {
+    margin: 2em 3em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .trainingpage .other-train {
+    margin: 2em 8em;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .trainingpage .other-train {
+    margin: 2em auto;
+    width: 1016px;
+  }
+}
+
+.trainingpage .other-train h2 {
+  text-align: center;
+}
+
+.trainingpage .other-train .table-job {
+  margin: 2em 0;
+  height: 500px;
+  overflow-y: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .trainingpage .other-train .table-job {
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .trainingpage .other-train .table-job {
+    margin: 1em 0;
+  }
+}
+
+.trainingpage .other-train .table-job a:nth-child(odd) .list-item {
+  background: #f6f6f6;
+}
+
+.trainingpage .other-train .table-job .list-item {
+  background: #fff;
+  padding: 1em;
+}
+
+@media screen and (min-width: 768px) {
+  .trainingpage .other-train .table-job .list-item {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 0.6fr 0.6fr 0.8fr 1fr;
+        grid-template-columns: 0.6fr 0.6fr 0.8fr 1fr;
+    grid-column-gap: 1em;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+}
+
+.trainingpage .other-train .table-job .list-item .date, .trainingpage .other-train .table-job .list-item .post, .trainingpage .other-train .table-job .list-item .auther, .trainingpage .other-train .table-job .list-item .txt {
+  margin-bottom: .25em;
+}
+
+.trainingpage .other-train .table-job .list-item .date span, .trainingpage .other-train .table-job .list-item .post span, .trainingpage .other-train .table-job .list-item .auther span, .trainingpage .other-train .table-job .list-item .txt span {
+  font-size: .8em;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .trainingpage .other-train .table-job .list-item .date span, .trainingpage .other-train .table-job .list-item .post span, .trainingpage .other-train .table-job .list-item .auther span, .trainingpage .other-train .table-job .list-item .txt span {
+    font-size: .7em;
+  }
+}
+
+.trainingpage .other-train .table-job .list-item .date p, .trainingpage .other-train .table-job .list-item .post p, .trainingpage .other-train .table-job .list-item .auther p, .trainingpage .other-train .table-job .list-item .txt p {
+  font-size: .8em;
+}
+
+@media screen and (min-width: 768px) {
+  .trainingpage .other-train .table-job .list-item .auther span {
+    height: 3em;
+    overflow: hidden;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .trainingpage .other-train .table-job .list-item .txt p {
+    height: 3em;
+    overflow: hidden;
+  }
+}
+
+.trainingpage .pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin: 1em auto;
+  border-top: 1px solid #1A921A;
+  padding-top: 1em;
+}
+
+@media screen and (min-width: 768px) {
+  .trainingpage .pagination {
+    margin: 1em 3em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .trainingpage .pagination {
+    margin: 1em 8em;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .trainingpage .pagination {
+    margin: 2em auto;
+    width: 1016px;
+  }
+}
+
+.trainingpage .pagination li {
+  list-style: none;
+  padding: 0 .5em;
+}
+
+.trainingpage .pagination .page {
+  border-right: 1px solid #000;
+}
+
+.trainingpage .pagination .page.current {
+  color: #1A921A;
+}
+
+.trainingpage .pagination .page.current a {
+  border-bottom: 2px solid #1A921A;
+  font-weight: 600;
+}
+
+.training-detailpage .income-train {
+  background: -webkit-gradient(linear, left top, left bottom, from(#1A921A), to(#56921A));
+  background: linear-gradient(#1A921A, #56921A);
+  border-radius: 10px;
+  padding: 1em;
+}
+
+@media screen and (min-width: 768px) {
+  .training-detailpage .income-train {
+    margin: 2em 3em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .training-detailpage .income-train {
+    margin: 2em 8em;
+    position: relative;
+    background: unset;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .training-detailpage .income-train {
+    margin: 2em auto;
+    width: 1016px;
+  }
+}
+
+.training-detailpage .income-train .title p {
+  font-size: 2em;
+  color: #fff;
+  height: 3.2em;
+  overflow: hidden;
+}
+
+.training-detailpage .income-train .date, .training-detailpage .income-train .post, .training-detailpage .income-train .by {
+  margin: 1em 0;
+}
+
+.training-detailpage .income-train .date p, .training-detailpage .income-train .post p, .training-detailpage .income-train .by p {
+  color: #fff;
+}
+
+.training-detailpage .income-train .date p i, .training-detailpage .income-train .post p i, .training-detailpage .income-train .by p i {
+  margin-right: 5px;
+}
+
+.training-detailpage .income-train .bg {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+@media screen and (min-width: 1024px) {
+  .training-detailpage .income-train .bg {
+    display: block;
+  }
+}
+
+.training-detailpage .income-train .bg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  opacity: 0.5;
+}
+
+.training-detailpage .income-train .bg:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #1a921ab6;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .training-detailpage .content {
+    margin: 2em 3em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .training-detailpage .content {
+    margin: 2em 8em;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .training-detailpage .content {
+    margin: 2em auto;
+    width: 1016px;
+  }
 }
 /*# sourceMappingURL=course.css.map */
