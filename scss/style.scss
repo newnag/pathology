@@ -744,7 +744,14 @@ main{
         }
 
         &.show{
-          right: 2%;
+          left: 2%;
+
+          @media screen and (min-width:$md){
+            left: calc(77vw - 15px);
+          }
+          @media screen and (min-width:$xl){
+            left: calc(83vw - 15px);
+          }
         }
 
         .right{
@@ -756,9 +763,9 @@ main{
           z-index: 5;
           display: inline-block;
           background-color: #000000db;
-          padding: 0 1em;
+          padding: 0.5em 1em;
 
-          @media screen and (min-width:$xxl){
+          @media screen and (min-width:$xl){
             background-color: $white;
           }
 
@@ -773,14 +780,23 @@ main{
           .nav-menu{
             display: flex;
             flex-direction: column;
-    
+
             a{
               color: $white;
               background: linear-gradient($green,$lightgreen);
+              border: 2px solid $green;
               border-radius: 5px;
-              padding: .5em 2em;
+              padding: .5em 1em;
               text-align: center;
               margin: .5em 0;
+              transition: .2s ease-in-out;
+
+              @media (hover:hover){
+                &:hover{
+                  background: $white;
+                  color: $green;
+                }
+              }
             }
           }
         }
@@ -815,9 +831,9 @@ main{
           transition: .3s ease-in-out;
 
           &.show{
-            @media screen and (min-width:$xl){
-              right: 22%;
-            }
+            // @media screen and (min-width:$xl){
+            //   right: 22%;
+            // }
           }
         }
 

@@ -1,0 +1,392 @@
+@import 'variable';
+
+.cover{
+  position: relative;
+  margin: 1em auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (min-width:$md){
+    margin: 2em 3em;
+  }
+  @media screen and (min-width:$lg){
+    margin: 2em 8em;
+  }
+  @media screen and (min-width:$xl){
+    margin: 2em auto;
+    width: 1016px;
+  }
+
+
+  .head-title{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: max-content;
+    
+    h1{
+      color: $white;
+      background: #1a921aad;
+      font-size: 1em;
+      text-align: center;
+      padding: 0.25em 0;
+      text-shadow: 2px 2px 3px #0000007a;
+      
+      @media screen and (min-width:$sm){
+        font-size: 1.4em;
+      }
+    }
+  }
+}
+
+.activitypage{
+  .grid-activity{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-row-gap: 2em;
+    margin: 1em auto;
+    justify-items: center;
+
+    @media screen and (min-width:$md){
+      grid-template-columns: repeat(2,1fr);
+      grid-column-gap: 1em;
+      margin: 2em 3em;
+    }
+    @media screen and (min-width:$lg){
+      margin: 2em 8em;
+    }
+    @media screen and (min-width:$xl){
+      grid-template-columns: repeat(3,1fr);
+      margin: 2em auto;
+      width: 1016px;
+    }
+
+    .box{
+      width: 328px;
+
+      @media (hover:hover){
+        &:hover{
+          figure{
+            img{
+              transform: scale(1.4);
+            }
+          }
+
+          .detail{
+            h2{
+              color: $orange;
+            }
+            .date,.auther{
+              span{
+                color: $orange;
+              }
+            }
+          }
+        }
+      }
+
+      figure{
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+
+        img{
+          width: 328px;
+          height: 216px;
+          transition: .5s ease-in-out;
+        }
+      }
+
+      .detail{
+        background: #f6f6f6;
+        padding: .5em;
+
+        .title{
+          margin-bottom: 1em;
+
+          h2{
+            height: 3.2em;
+            overflow: hidden;
+            font-size: 1.2em;
+            transition: .3s ease-in-out;
+          }
+        }
+
+        .date,.auther{
+          span{
+            color: $gray;
+            font-size: .9em;
+            transition: .3s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+
+  .head-content{
+    margin: 1em auto;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width:$md){
+      margin: 2em 3em;
+    }
+    @media screen and (min-width:$lg){
+      margin: 2em 8em;
+    }
+    @media screen and (min-width:$xl){
+      margin: 2em auto;
+      width: 1016px;
+    }
+
+    .cover-content{
+      position: relative;
+      display: flex;
+
+      img{
+        width: 100%;
+      }
+
+      .title{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: max-content;
+        padding: .5em;
+        background: #0000008f;
+
+        h1{
+          font-size: 1em;
+          color: $white;
+          height: 3.2em;
+          overflow: hidden;
+
+          @media screen and (min-width:$xl){
+            height: 4.6em;
+            font-size: 1.2em;
+          }
+        }
+      }
+    }
+
+    .accessibility{
+      margin-top: 1em;
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      grid-row-gap: .5em;
+
+      @media screen and (min-width:$md){
+        grid-template-columns: .4fr .4fr .5fr 1fr;
+      }
+
+      .album{
+        a{
+          color: $green;
+
+          i{
+            padding: .25em;
+            background: $green;
+            color: $white;
+            border-radius: 3px;
+          }
+        }
+      }
+      .share{
+        a{
+          color: $green;
+
+          i{
+            padding: .25em;
+            background: $green;
+            color: $white;
+            border-radius: 3px;
+          }
+        }
+      }
+      .date,.auther{
+        color: $green;
+
+        i{
+          padding: .25em;
+          background: $green;
+          color: $white;
+          border-radius: 3px;
+        }
+      }
+    }
+  }
+
+  .ck-content{
+    margin: 2em auto;
+
+    @media screen and (min-width:$md){
+      margin: 2em 3em;
+    }
+    @media screen and (min-width:$lg){
+      margin: 2em 8em;
+    }
+    @media screen and (min-width:$xl){
+      margin: 2em auto;
+      width: 1016px;
+    }
+
+    p{
+      img{
+        width: 100%;
+      }
+    }
+    ul,ol{
+      li{
+        list-style-position: inside;
+      }
+    }
+  }
+
+  .gallaly{
+    margin: 2em auto;
+
+    @media screen and (min-width:$md){
+      margin: 2em 3em;
+    }
+    @media screen and (min-width:$lg){
+      margin: 2em 8em;
+    }
+    @media screen and (min-width:$xl){
+      margin: 2em auto;
+      width: 1016px;
+    }
+
+    p{
+      color: $green;
+      border-bottom: 2px dashed $green;
+      padding-bottom: .5em;
+    }
+
+    .grid-picture{
+      margin: 1em 0;
+      display: flex;
+      flex-wrap: wrap;
+
+      .column{
+        flex:  50%;
+        max-width: 50%;
+        padding: 0 8px;
+
+        @media screen and (min-width:$lg){
+          flex:  25%;
+          max-width: 25%;
+        }
+
+        .picture{
+          padding: 4px 0;
+          position: relative;
+          cursor: pointer;
+
+          img{
+            border-radius: 5px;
+            transition: .2s ease-in-out;
+          }
+
+          @media (hover:hover){
+            &:hover{
+              &:after{
+                content: 'ดูเพิ่มเติม';
+                position: absolute;
+                color: $black;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.2em;
+                font-weight: 500;
+              }
+
+              img{
+                opacity: .2;
+              }
+            }
+          }
+          
+        }
+      }
+    }
+  }
+}
+
+.zoom-img{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000e1;
+  z-index: 7;
+  visibility: hidden;
+  opacity: 0;
+  transition: .3s ease-in-out;
+
+  &.show{
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .big-img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .close{
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    color: $white;
+    font-size: 2em;
+    font-weight: 600;
+    cursor: pointer;
+    z-index: 10;
+  }
+}
+
+.pagination{
+  display: flex;
+  justify-content: flex-end;
+  margin: 1em auto;
+  border-top: 1px solid $green;
+  padding-top: 1em;
+
+  @media screen and (min-width:$md){
+    margin: 1em 3em;
+  }
+  @media screen and (min-width:$lg){
+    margin: 1em 8em;
+  }
+  @media screen and (min-width:$xl){
+    margin: 2em auto;
+    width: 1016px;
+  }
+
+  li{
+    list-style: none;
+    padding: 0 .5em;
+  }
+  .page{
+    border-right: 1px solid $black;
+
+    &.current{
+      color: $green;
+
+      a{
+        border-bottom: 2px solid $green;
+        font-weight: 600;
+      }
+    }
+  }
+}

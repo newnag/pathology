@@ -936,7 +936,19 @@ main section.page aside .aside-right {
 }
 
 main section.page aside .aside-right.show {
-  right: 2%;
+  left: 2%;
+}
+
+@media screen and (min-width: 768px) {
+  main section.page aside .aside-right.show {
+    left: calc(77vw - 15px);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  main section.page aside .aside-right.show {
+    left: calc(83vw - 15px);
+  }
 }
 
 main section.page aside .aside-right .right {
@@ -951,10 +963,10 @@ main section.page aside .aside-right .right {
   z-index: 5;
   display: inline-block;
   background-color: #000000db;
-  padding: 0 1em;
+  padding: 0.5em 1em;
 }
 
-@media screen and (min-width: 1536px) {
+@media screen and (min-width: 1280px) {
   main section.page aside .aside-right .right {
     background-color: #fff;
   }
@@ -982,10 +994,20 @@ main section.page aside .aside-right .right .nav-menu a {
   color: #fff;
   background: -webkit-gradient(linear, left top, left bottom, from(#1A921A), to(#56921A));
   background: linear-gradient(#1A921A, #56921A);
+  border: 2px solid #1A921A;
   border-radius: 5px;
-  padding: .5em 2em;
+  padding: .5em 1em;
   text-align: center;
   margin: .5em 0;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+@media (hover: hover) {
+  main section.page aside .aside-right .right .nav-menu a:hover {
+    background: #fff;
+    color: #1A921A;
+  }
 }
 
 main section.page aside .button-aside {
@@ -1028,12 +1050,6 @@ main section.page aside .button-aside.right {
   right: 30px;
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
-}
-
-@media screen and (min-width: 1280px) {
-  main section.page aside .button-aside.right.show {
-    right: 22%;
-  }
 }
 
 main section.page aside .button-aside i {

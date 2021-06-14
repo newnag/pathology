@@ -67,8 +67,19 @@ function slide_home(){
 function open_aside(side){
    let aside = `aside-${side}`
 
-   document.querySelector(`.page aside .${aside}`).classList.toggle('show')
-   document.querySelector(`.page aside .button-aside.${side}`).classList.toggle('show')
+   if(side === "left"){
+    document.querySelector(`.page aside .aside-right`).classList.remove('show')
+    document.querySelector(`.page aside .button-aside.right`).classList.remove('show')
+    document.querySelector(`.page aside .${aside}`).classList.toggle('show')
+    document.querySelector(`.page aside .button-aside.${side}`).classList.toggle('show')
+   }
+   else if(side === "right"){
+    document.querySelector(`.page aside .aside-left`).classList.remove('show')
+    document.querySelector(`.page aside .button-aside.left`).classList.remove('show')
+    document.querySelector(`.page aside .${aside}`).classList.toggle('show')
+    document.querySelector(`.page aside .button-aside.${side}`).classList.toggle('show')
+   }
+   
 }
 
 ///////////////////////////////////////////////////////////////////
