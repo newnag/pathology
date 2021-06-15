@@ -44,6 +44,7 @@ button{
   padding: .5em 1em;
   border-radius: 15px;
   border: unset;
+  cursor: pointer;
 }
 select{
   width: 100%;
@@ -132,6 +133,10 @@ a{
     padding: 5px 10px 5px 5px;
     background: $white;
   }
+}
+
+.hidden{
+  display: none;
 }
 
 /////////////////////////////////////////////////////////////////
@@ -596,8 +601,12 @@ header{
 }
 
 main{
-  min-height: calc(100vh - 91px + 560px);
+  min-height: calc(100vh - 91px);
   margin-top: 91px;
+
+  @media screen and (min-width:$xl){
+    min-height: calc(100vh - 91px + 560px);
+  }
 
   section.page{
     position: relative;

@@ -1,0 +1,493 @@
+@import 'variable';
+
+.cover{
+  position: relative;
+  margin: 1em auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (min-width:$md){
+    margin: 2em 3em;
+  }
+  @media screen and (min-width:$lg){
+    margin: 2em 8em;
+  }
+  @media screen and (min-width:$xl){
+    margin: 2em auto;
+    width: 1016px;
+  }
+
+
+  .head-title{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: max-content;
+    
+    h1{
+      color: $white;
+      background: #1a921aad;
+      font-size: 1em;
+      text-align: center;
+      padding: 0.25em 0;
+      text-shadow: 2px 2px 3px #0000007a;
+      
+      @media screen and (min-width:$sm){
+        font-size: 1.4em;
+      }
+    }
+  }
+}
+
+.departmentpage{
+  .ck{
+    margin: 2em auto;
+
+    @media screen and (min-width:$md){
+      margin: 2em 3em;
+    }
+    @media screen and (min-width:$lg){
+      margin: 2em 8em;
+    }
+    @media screen and (min-width:$xl){
+      margin: 2em auto;
+      width: 1016px;
+    }
+
+    p{
+      img{
+        width: 100%;
+      }
+    }
+    ul,ol{
+      li{
+        list-style-position: inside;
+      }
+    }
+  }
+}
+
+.staffpage{
+  .grid-staff{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-row-gap: 4em;
+    margin: 1em auto;
+
+    @media screen and (min-width:$md){
+      grid-template-columns: repeat(2,1fr);
+      grid-column-gap: 1em;
+      margin: 1em 3em;
+    }
+    @media screen and (min-width:$lg){
+      margin: 1em 8em;
+    }
+    @media screen and (min-width:$xl){
+      margin: 2em auto;
+      width: 1016px;
+    }
+
+    .box{
+      display: flex;
+
+      figure{
+        width: 160px;
+        height: 230px;
+        display: flex;
+
+        img{
+          border-radius: 5px;
+          object-fit: cover;
+        }
+      }
+
+      .detail{
+        width: calc(100% - 160px);
+        padding-left: .5em;
+
+        @media screen and (min-width:$lg){
+          padding-left: 2em;
+        }
+
+        .name{
+          text-align: center;
+          border-bottom: 1px dashed $gray;
+          padding-bottom: .5em;
+
+          p:first-child{
+            font-weight: 500;
+            font-size: 1.2em;
+          }
+        }
+        .position{
+          text-align: center;
+          padding-top: .5em;
+          margin-bottom: .5em;
+
+          p{
+            font-size: 1em;
+            font-weight: 500;
+            color: $gray;
+          }
+        }
+
+        .department,.tel,.email{
+          margin: .25em 0;
+          p{
+            color: lightgray;
+            font-size: .8em;
+
+            @media screen and (min-width:$xl){
+              font-size: .9em;
+            }
+          }
+        }
+
+        .button{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-top: 1em;
+
+          a{
+            background-color: $green;
+            color: $white;
+            border: 1px solid $green;
+            transition: .3s ease-in-out;
+
+            @media (hover:hover){
+              &:hover{
+                background-color: $white;
+                color: $green;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .detail-staff{
+    margin: 1em auto;
+
+    @media screen and (min-width:$md){
+      margin: 1em 3em;
+    }
+    @media screen and (min-width:$lg){
+      margin: 1em 8em;
+    }
+    @media screen and (min-width:$xl){
+      margin: 2em auto;
+      width: 1016px;
+    }
+
+    .top-zone{
+      display: flex;
+      flex-direction: column;
+
+      @media screen and (min-width:$md){
+        flex-direction: row;
+
+      }
+
+      figure{
+        display: flex;
+        justify-content: center;
+
+        img{
+          width: 278px;
+          height: 400px;
+        }
+      }
+
+      .personal-info{
+        margin-top: 1em;
+        border-bottom: 2px dashed $green;
+
+        @media screen and(min-width:$md){
+          width: calc(100% - 278px);
+          margin-left: 1em;
+          margin-top: 0;
+        }
+
+        .name{
+          text-align: center;
+          border-bottom: 1px dashed $gray;
+          padding-bottom: .5em;
+
+          p{
+            &:first-child{
+              font-size: 1.4em;
+
+              @media screen and (min-width:$md){
+                font-size: 1.6em;
+              }
+              @media screen and (min-width:$xl){
+                font-size: 2em;
+              }
+            }
+            &:last-child{
+              font-size: 1em;
+              text-transform: uppercase;
+
+              @media screen and (min-width:$md){
+                font-size: 1.1em;
+              }
+              @media screen and (min-width:$xl){
+                font-size: 1.4em;
+              }
+            }
+          }
+        }
+
+        .position{
+          text-align: center;
+          padding-top: .5em;
+          margin-bottom: 1em;
+
+          p{
+            @media screen and (min-width:$md){
+              font-size: 1.2em;
+            }
+          }
+        }
+
+        .department,.contact,.tel,.email,.time{
+          margin: .5em 0;
+          padding: 0 1em;
+          display: grid;
+          grid-template-columns: .3fr 1fr;
+          grid-column-gap: 1em;
+
+          @media screen and (min-width:$md){
+            margin: 1em 0;
+          }
+          @media screen and (min-width:$xl){
+            grid-template-columns: .2fr 1fr;
+          }
+
+          p{
+            color: $gray;
+            font-size: .8em;
+
+            &:first-child{
+              text-align: right;
+            }
+
+            @media screen and (min-width:$md){
+              font-size: 1em;
+            }
+          }
+        }
+      }
+    }
+
+    .bottom-zone{
+      display: flex;
+      flex-direction: column;
+
+      @media screen and (min-width:$md){
+        flex-direction: row;
+        margin-top: 2em;
+        justify-content: space-between;
+      }
+
+      .select-info{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin: 2em 0;
+        border: 1px solid $green;
+        padding: .5em 0;
+
+        @media screen and (min-width:$md){
+          flex-direction: column;
+          width: 250px;
+          height: max-content;
+          margin-right: 1em;
+          align-items: flex-start;
+          padding: .25em 0;
+        }
+
+        .select-menu{
+          cursor: pointer;
+          color: $green;
+          background: $white;
+          padding: .25em;
+
+          @media screen and (min-width:$md){
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px dashed $green;
+            margin: .25em 0;
+          }
+
+          &:last-child{
+            border-right: unset;
+          }
+
+          &.active{
+            background: linear-gradient($green,$lightgreen);
+            color: $white;
+            border-radius: 5px;
+            position: relative;
+
+            @media screen and (min-width:$md){
+              &:after{
+                font-family: "Font Awesome 5 Free"; 
+                font-weight: 900;
+                content: '\f0da';
+                position: absolute;
+                top: -13px;
+                right: -21px;
+                font-size: 3.4em;
+                color: $green;
+              }
+            }
+          }
+
+          @media (hover:hover){
+            &:hover{
+              background: linear-gradient($green,$lightgreen);
+              color: $white;
+            }
+          }
+        }
+      }
+
+      .info-selected{
+
+        @media screen and (min-width:$md){
+          width: calc(100% - 278px);
+          margin-left: 2em;
+        }
+
+        .info-personal,>.research,>.research-interest{
+          display: none;
+          
+          &.show{
+            display: block;
+          }
+
+          .box{
+            margin-bottom: 2em;
+  
+            p.title{
+              color: $green;
+              border-bottom: 1px solid $black;
+              font-weight: 600;
+            }
+            p.txt{
+              margin-top: .5em;
+              color: $gray;
+            }
+  
+            &.edu{
+              .grid-edu{
+                overflow-x: auto;
+  
+                .list{
+                  display: grid;
+                  grid-template-columns: 15% 50% 50% 30%;
+                  grid-auto-columns: auto;
+                  margin: .5em 0;
+  
+                  @media screen and (min-width:$lg){
+                    grid-template-columns: 10% 35% 40% 25%;
+                  }
+                  @media screen and (min-width:$xl){
+                    grid-template-columns: 10% 35% 35% 20%;
+                  }
+  
+                  p{
+                    height: 1.4em;
+                    overflow: hidden;
+                    color: $gray;
+                  }
+                }
+              }
+            }
+  
+            &.research{
+              .list{
+                margin: 1em 0 3em 0;
+                padding-left: 2em;
+  
+                p{
+                  color: $gray;
+                }
+  
+                .accessibility{
+                  display: flex;
+                  margin-top: .5em;
+  
+                  .menu{
+                    border-right: 1px solid $gray;
+                    padding-right: 1em;
+  
+                    &:last-child{
+                      border-right: unset;
+                    }
+                  }
+  
+                  .file{
+                    margin-right: 1em;
+  
+                    a{
+                      color: $green;
+                    }
+                  }
+                  .link{
+                    margin-right: 1em;
+  
+                    a{
+                      color: $gray;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.pagination{
+  display: flex;
+  justify-content: flex-end;
+  margin: 1em auto;
+  border-top: 1px solid $green;
+  padding-top: 1em;
+
+  @media screen and (min-width:$md){
+    margin: 1em 3em;
+  }
+  @media screen and (min-width:$lg){
+    margin: 1em 8em;
+  }
+  @media screen and (min-width:$xl){
+    margin: 2em auto;
+    width: 1016px;
+  }
+
+  li{
+    list-style: none;
+    padding: 0 .5em;
+  }
+  .page{
+    border-right: 1px solid $black;
+
+    &.current{
+      color: $green;
+
+      a{
+        border-bottom: 2px solid $green;
+        font-weight: 600;
+      }
+    }
+  }
+}

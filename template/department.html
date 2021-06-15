@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Pathology</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="/css/style.min.css">
+  <link rel="stylesheet" href="/css/department.min.css">
+</head>
+<body>
+  <header class="bg-grad-green">
+    <div class="header">
+      <div class="logo"><a href=""><img src="/img/logo/logo-head.png" alt=""></a></div>
+      <nav>
+        <ul class="menu">
+          <li class="active"><a href="">หน้าหลัก</a></li>
+          <li>
+            <a href="#" onclick="open_submenu(this)">ภาควิชา <i class="fas fa-chevron-down"></i></a>
+            <ul class="submenu">
+              <li><a href="">โครงสร้างองค์กร</a></li>
+              <li><a href="">วิสัยทัศน์และพันธกิจ</a></li>
+              <li><a href="">ประวัติภาควิชา</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" onclick="open_submenu(this)">การเรียนการสอน <i class="fas fa-chevron-down"></i></a>
+            <ul class="submenu">
+              <li>
+                <a href="#" onclick="open_insubmenu1(this)">หลักสูตร <i class="fas fa-chevron-right"></i></a>
+                <ul class="insubmenu1">
+                  <li>
+                    <a href="#" onclick="open_insubmenu2(this)">ระดับบัณฑิตศึกษา <i class="fas fa-chevron-right"></i></a>
+                    <ul class="insubmenu2">
+                      <li><a href="#">วิทยาศาสตร์มหาบัณฑิต สาขาวิชาพยาธิวิทยา</a></li>
+                      <li><a href="#">ปรัชญาดุษฏีบัณฑิต สาขาวิชาพยาธิวิทยา</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="">หลักสูตรแพทย์ฝึกอบรม</a></li>
+                </ul>
+              </li>
+              <li><a href="">นักศึกษาปัจจุบัน</a></li>
+              <li><a href="">ศิษย์เก่า</a></li>
+              <li><a href="">แพทย์ฝึกอบรม</a></li>
+              <li><a href="">ฝึกอบรบ</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">งานบริการพยาธิวิทยา <i class="fas fa-chevron-down"></i></a>
+            <ul class="submenu">
+              <li><a href="">ศัลยพยาธิวิทยา</a></li>
+              <li><a href="">เซลล์พยาธิวิทยา</a></li>
+              <li><a href="">ตรวจศพ</a></li>
+              <li><a href="">เซลล์พันธุศาสตร์</a></li>
+              <li><a href="">พยาธิวิทยาระดับโมเลกุล</a></li>
+              <li><a href="">กล้องจุลทรรศน์อิเล็กตรอน</a></li>
+              <li><a href="">สแกนสไลด์และภาพถ่าย</a></li>
+              <li><a href="">ตารางเวร</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="">งานวิจัย,นวัตกรรม</a>
+          </li>
+          <li>
+            <a href="">กิจกรรม</a>
+          </li>
+          <li>
+            <a href="">บุคลากร</a>
+          </li>
+        </ul>
+        <div class="member">
+          <div class="register"><a href="">สมัครสมาชิก</a></div>
+          <div class="login"><a href="">เข้าสู่ระบบ</a></div>
+        </div>
+        <div class="lang">
+          <span onclick="open_langList(this)">TH <i class="fas fa-globe"></i></span>
+
+          <ul class="list-lang">
+            <li><a href="">TH</a></li>
+            <li><a href="">EN</a></li>
+          </ul>
+        </div>
+        <div class="close-mobile" onclick="closemenu()"><i class="far fa-times-circle"></i></div>
+      </nav>
+      <div class="hamburger"><i class="fas fa-bars" onclick="open_navmenu_mobile()"></i></div>
+    </div>
+  </header>
+
+  <main>
+    <div class="homeslide swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="/img/slide1.png" alt=""></div>
+        <div class="swiper-slide"><img src="/img/slide1.png" alt=""></div>
+        <div class="swiper-slide"><img src="/img/slide1.png" alt=""></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <section class="page">
+      <div class="departmentpage">
+        <div class="cover container">
+          <img src="/img/cover1.png" alt="">
+          <div class="head-title">
+            <h1>โครงสร้างองค์กร</h1>
+          </div>
+        </div>
+
+        <div class="ck container">
+          <p>ck</p>
+          <p>ck</p>
+          <p>ck</p>
+          <p>ck</p>
+          <p>ck</p>
+          <p>ck</p>
+          <p>ck</p>
+          <p>ck</p>
+          <p>ck</p>
+          <p>ck</p>
+          <p>ck</p>
+        </div>
+      </div>
+  
+      <aside>
+        <div class="button-aside left" onclick="open_aside('left')"><i class="fas fa-ellipsis-v"></i></div>
+        <div class="aside-left">
+          <div class="left">
+            <div class="nav-menu">
+              <li><a href="">ภาควิชา</a></li>
+              <li><a href="">บุคลากร</a></li>
+              <li><a href="">นักศึกษา</a></li>
+              <li><a href="">การเรียนการสอน</a></li>
+              <li><a href="">การบริการพยาธิวิทยา</a></li>
+              <li><a href="">งานวิจัยและนวัตกรรม</a></li>
+              <li>
+                Patho Conference
+                
+                <ul class="submenu">
+                  <li><a href="">ประจำปี 2564</a></li>
+                  <li><a href="">ประจำปี 2563</a></li>
+                  <li><a href="">ประจำปี 2562</a></li>
+                </ul>
+              </li>
+              <li><a href="">ภาพกิจกรรม</a></li>
+              <li><a href="">ติดต่อสอบถาม</a></li>
+            </div>
+
+            <div class="facebook">
+              <div class="fb-page" data-href="https://www.facebook.com/pathokku/" data-tabs="timeline" data-width="" data-height="300" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/pathokku/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/pathokku/">ภาควิชาพยาธิวิทยา ม.ขอนแก่น - Pathology MD KKU</a></blockquote></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="button-aside right" onclick="open_aside('right')"><i class="fas fa-ellipsis-v"></i></div>
+        <div class="aside-right">
+          <div class="right">
+            <div class="book"><img src="/img/book5.png" alt=""></div>
+            <div class="nav-menu">
+              <a href="">มหาวิทยาลัยขอนแก่น</a>
+              <a href="">การเงิน/สลิปเงินเดือน</a>
+              <a href="">แบบฟอร์มต่างๆ</a>
+              <a href="">Covid-19</a>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer">
+      <div class="footer-contact">
+        <img src="/img/logo/logo-head.png" alt="">
+        <div class="address">
+          <p>ฝ่ายวิชาการ ชั้น5</p>
+          <p>อาคารเรียนรวมคณะแพทยศาสตร์มหาวิทยาลัยขอนแก่น</p>
+          <p>เลขที่ 123 หมู่ 16 ถนนมิตรภาพ ตำบลในเมือง</p>
+          <p>อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000</p>
+        </div>
+        <div class="tel">
+          <p>โทร. 043-363-691, 043-363-976</p>
+        </div>
+      </div>
+
+      <div class="footer-nav">
+        <ul>
+          <p>ภาควิชา</p>
+          <li data-list="-"><a href="">ภาควิชาพยาธิที่ 1</a></li>
+          <li data-list="-"><a href="">ภาควิชาพยาธิที่ 2</a></li>
+          <li data-list="-"><a href="">ภาควิชาพยาธิที่ 3</a></li>
+          <li data-list="-"><a href="">ภาควิชาพยาธิที่ 4</a></li>
+          <li data-list="-"><a href="">ภาควิชาพยาธิที่ 5</a></li>
+          <li data-list="-"><a href="">ภาควิชาพยาธิที่ 6</a></li>
+          <li data-list="-"><a href="">ภาควิชาพยาธิที่ 7</a></li>
+          <li data-list="-"><a href="">ภาควิชาพยาธิที่ 8</a></li>
+        </ul>
+
+        <ul>
+          <p>การเรียนการสอน</p>
+          <li data-list="-"><a href="">หลักสูตรที่ 1</a></li>
+          <li data-list="-"><a href="">หลักสูตรที่ 2</a></li>
+          <li data-list="-"><a href="">หลักสูตรที่ 3</a></li>
+          <li data-list="-"><a href="">หลักสูตรที่ 4</a></li>
+          <li data-list="-"><a href="">หลักสูตรที่ 5</a></li>
+          <li data-list="-"><a href="">ศิษย์เก่า</a></li>
+          <li data-list="-"><a href="">ฝึกอบรม</a></li>
+        </ul>
+
+        <ul>
+          <p>งานบริการพยาธิวิทยา</p>
+          <li data-list="-"><a href="">ศัลยพยาธิวิทยา</a></li>
+          <li data-list="-"><a href="">เซลล์พยาธิวิทยา</a></li>
+          <li data-list="-"><a href="">ตรวจศพ</a></li>
+          <li data-list="-"><a href="">เซลล์พันธุศาสตร์</a></li>
+          <li data-list="-"><a href="">พยาธิวิทยาระดับโมเลกุล</a></li>
+          <li data-list="-"><a href="">กล้องจุลทรรศน์อิเล็กตรอน</a></li>
+          <li data-list="-"><a href="">สแกนสไลด์และภาพถ่าย</a></li>
+          <li data-list="-"><a href="">ตารางเวร</a></li>
+        </ul>
+      </div>
+
+      <div class="facebook">
+        <div class="fb-page" data-href="https://www.facebook.com/pathokku/" data-tabs="" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/pathokku/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/pathokku/">ภาควิชาพยาธิวิทยา ม.ขอนแก่น - Pathology MD KKU</a></blockquote></div>
+      </div>
+    </div>
+    <div class="copy">
+      <p>2021 &copy; ภาควิชาพยาธิวิทยา คณะแพทยศาสตร์ มหาวิทยาลัยขอนแก่น</p>
+    </div>
+  </footer>
+
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v10.0&appId=599318023929202&autoLogAppEvents=1" nonce="xFIW6ef2"></script>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>
