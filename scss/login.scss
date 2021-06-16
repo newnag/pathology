@@ -101,6 +101,42 @@
       button{
         color: $green;
         background: $white;
+        border: 1px solid $white;
+
+        @media (hover:hover){
+          &:hover{
+            color: $white;
+            background: $green;
+            border: 1px solid $green;
+          }
+        }
+      }
+    }
+
+    .radio-type{
+      display: flex;
+      align-items: center;
+      margin-bottom: 2em;
+      flex-wrap: wrap;
+
+      .radio{
+        display: flex;
+        align-items: center;
+        margin-right: 2em;
+        margin-bottom: 1em;
+
+        @media screen and (min-width:$md){
+          margin-bottom: 0;
+        }
+
+        input{
+          width: 20px;
+          height: 20px;
+        }
+        label{
+          margin-left: 1em;
+          color: $white;
+        }
       }
     }
   }

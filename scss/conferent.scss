@@ -1,0 +1,411 @@
+@import 'variable';
+
+.cover{
+  margin: 1em auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (min-width:$md){
+    margin: 1em 3em;
+  }
+  @media screen and (min-width:$lg){
+    margin: 1em 8em;
+  }
+  @media screen and (min-width:$xl){
+    margin: 1em auto;
+    width: 1016px;
+  }
+}
+
+.conferentpage{
+  .head-conferent{
+    margin: 1em auto;
+    padding: .5em;
+    border-radius: 5px;
+
+    @media screen and (min-width:$md){
+      margin: 1em 3em;
+    }
+    @media screen and (min-width:$lg){
+      margin: 1em 8em;
+    }
+    @media screen and (min-width:$xl){
+      margin: 1em auto;
+      width: 1016px;
+    }
+
+    span{
+      color: $white;
+
+      &:last-child{
+        font-size: .8em;
+        margin-left: 1em;
+      }
+    }
+  }
+
+  .table-conference{
+    margin: 1em auto;
+    overflow-y: auto;
+
+    @media screen and (min-width:$md){
+      margin: 1em 3em;
+    }
+    @media screen and (min-width:$lg){
+      margin: 1em 8em;
+    }
+    @media screen and (min-width:$xl){
+      margin: 1em auto;
+      width: 1016px;
+    }
+
+    .head{
+      display: grid;
+      grid-template-columns: 80px 120px 500px;
+      grid-auto-flow: column;
+
+      @media screen and (min-width:$lg){
+        grid-template-columns: 10% 15% 75%;
+      }
+
+      .td{
+        text-align: center;
+      }
+    }
+
+    .body{
+      .list{
+        display: grid;
+        grid-template-columns: 80px 120px 500px;
+        grid-auto-flow: column;
+
+        @media screen and (min-width:$lg){
+          grid-template-columns: 10% 15% 75%;
+        }
+
+        &:hover{
+          background: $green;
+          color: $white;
+        }
+
+        .td{
+          border: 1px solid $gray;
+
+          &:nth-child(1),&:nth-child(2){
+            padding: .5em 0;
+            text-align: center;
+
+            @media screen and (min-width:$xl){
+              padding: 1em 0;
+            }
+          }
+          &:nth-child(3){
+            padding: .5em 1em;
+
+            @media screen and (min-width:$xl){
+              padding: 1em 1.5em;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .head-conferent-detail{
+    display: flex;
+    flex-direction: column;
+    margin: 1em auto;
+
+    @media screen and (min-width:$md){
+      margin: 1em 3em;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    @media screen and (min-width:$lg){
+      margin: 1em 8em;
+    }
+    @media screen and (min-width:$xl){
+      margin: 1em auto;
+      width: 1016px;
+    }
+
+    .left{
+      .no,.date{
+        p{
+          color: $green;
+        }
+      }
+    }
+
+    .right{
+      p{
+        color: $green;
+      }
+    }
+  }
+
+  .title-conference{
+    margin: 1em auto;
+
+    @media screen and (min-width:$md){
+      margin: 1em 3em;
+    }
+    @media screen and (min-width:$lg){
+      margin: 1em 8em;
+    }
+    @media screen and (min-width:$xl){
+      margin: 1em auto;
+      width: 1016px;
+    }
+
+  }
+
+  .video{
+    margin: 1em auto;
+
+    @media screen and (min-width:$md){
+      margin: 1em 3em;
+      padding: 0 4em;
+    }
+    @media screen and (min-width:$lg){
+      margin: 1em 8em;
+      padding: 0 8em;
+    }
+    @media screen and (min-width:$xl){
+      margin: 1em auto;
+      width: 1016px;
+      padding: 0 10em;
+    }
+
+    iframe{
+      width: 100%!important;
+      height: 300px!important;
+
+      @media screen and (min-width:$lg){
+        height: 400px!important;
+      }
+    }
+  }
+
+  .button-join{
+    margin: 1em 0;
+    display: flex;
+    justify-content: center;
+
+    button{
+      background: $green;
+      color: $white;
+      border: 1px solid $green;
+
+      @media (hover:hover){
+        &:hover{
+          background: $white;
+          color: $green;
+        }
+      }
+    }
+  }
+
+  .comment{
+    margin: 1em auto;
+    background: #f6f6f6;
+    border-radius: 10px;
+    padding: 1em;
+
+    @media screen and (min-width:$md){
+      margin: 1em 3em;
+    }
+    @media screen and (min-width:$lg){
+      margin: 1em 8em;
+    }
+    @media screen and (min-width:$xl){
+      margin: 1em auto;
+      width: 1016px;
+    }
+
+    .box-input-comment{
+      display: flex;
+      flex-direction: column;
+
+      @media screen and (min-width:$md){
+        flex-direction: row;
+      }
+
+      .avatar{
+        display: none;
+        width: 80px;
+
+        @media screen and (min-width:$md){
+          display: block;
+        }
+
+        img{
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+
+      .input{
+        position: relative;
+        display: flex;
+        width: 100%;
+
+        textarea{
+          padding: 5px 25px 5px 5px;
+          border: 1px solid $black;
+        }
+
+        i{
+          position: absolute;
+          bottom: 5px;
+          right: 5px;
+          color: $gray;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .comment-show{
+      margin-top: 2em;
+
+      .list{
+        display: grid;
+        grid-template-columns: 80px 1fr;
+        margin-bottom: 1em;
+
+        .avatar{
+          img{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+        }
+
+        .comment-txt{
+          .name{
+            display: flex;
+            align-items: baseline;
+
+            p{
+              color: $deep-blue;
+              font-weight: 600;
+              width: calc(100% - 60px);
+              height: 1.4em;
+              overflow: hidden;
+            }
+
+            .ask{
+              font-size: .8em;
+              color: $gray;
+              margin-left: 1em;
+            }
+          }
+          .txt{
+            color: $deep-blue;
+          }
+        }
+        
+        .reply{
+          grid-column: 2/3;
+          margin-top: .5em;
+
+          .collap-reply{
+            color: $sky;
+            font-size: .9em;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            -webkit-user-select: none; /* Safari */
+            -ms-user-select: none; /* IE 10 and IE 11 */
+            user-select: none; /* Standard syntax */
+
+            i{
+              margin-right: 5px;
+            }
+          }
+
+          .box-reply{
+            .list-reply{
+              display: grid;
+              grid-template-columns: 80px 1fr;
+              margin: 1em 0;
+  
+              .avatar{
+                img{
+                  width: 50px;
+                  height: 50px;
+                  border-radius: 50%;
+                  object-fit: cover;
+                }
+              }
+              .comment-txt{
+                .name{
+                  display: flex;
+                  align-items: baseline;
+      
+                  p{
+                    color: $deep-blue;
+                    font-weight: 600;
+                    width: 100%;
+                    height: 1.4em;
+                    overflow: hidden;
+                  }
+      
+                  .ask{
+                    font-size: .8em;
+                    color: $gray;
+                    margin-left: 1em;
+                  }
+                }
+                .txt{
+                  color: $deep-blue;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.pagination{
+  display: flex;
+  justify-content: flex-end;
+  margin: 1em auto;
+  border-top: 1px solid $green;
+  padding-top: 1em;
+
+  @media screen and (min-width:$md){
+    margin: 1em 3em;
+  }
+  @media screen and (min-width:$lg){
+    margin: 1em 8em;
+  }
+  @media screen and (min-width:$xl){
+    margin: 2em auto;
+    width: 1016px;
+  }
+
+  li{
+    list-style: none;
+    padding: 0 .5em;
+  }
+  .page{
+    border-right: 1px solid $black;
+
+    &.current{
+      color: $green;
+
+      a{
+        border-bottom: 2px solid $green;
+        font-weight: 600;
+      }
+    }
+  }
+}

@@ -126,6 +126,54 @@
 .loginpage .box-auth .button-signin button {
   color: #1A921A;
   background: #fff;
+  border: 1px solid #fff;
+}
+
+@media (hover: hover) {
+  .loginpage .box-auth .button-signin button:hover {
+    color: #fff;
+    background: #1A921A;
+    border: 1px solid #1A921A;
+  }
+}
+
+.loginpage .box-auth .radio-type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2em;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.loginpage .box-auth .radio-type .radio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 2em;
+  margin-bottom: 1em;
+}
+
+@media screen and (min-width: 768px) {
+  .loginpage .box-auth .radio-type .radio {
+    margin-bottom: 0;
+  }
+}
+
+.loginpage .box-auth .radio-type .radio input {
+  width: 20px;
+  height: 20px;
+}
+
+.loginpage .box-auth .radio-type .radio label {
+  margin-left: 1em;
+  color: #fff;
 }
 
 .loginpage .bg {
