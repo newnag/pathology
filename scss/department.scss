@@ -67,6 +67,111 @@
       }
     }
   }
+
+  .structure{
+    margin: 2em auto;
+
+    @media screen and (min-width:$md){
+      margin: 2em 3em;
+    }
+    @media screen and (min-width:$lg){
+      margin: 2em 8em;
+    }
+    @media screen and (min-width:$xl){
+      margin: 2em auto;
+      width: 1016px;
+    }
+
+    .level1{
+      display: grid;
+      grid-template-columns: 100%;
+      justify-items: center;
+      margin-bottom: 2em;
+      border-bottom: 1px solid $gray;
+      padding-bottom: 1em;
+
+      .item{
+        width: 225px;
+        text-align: center;
+
+        figure{
+          display: flex;
+          justify-content: center;
+
+          img{
+            width: 113px;
+            height: 162px;
+            border-radius: 5px;
+            object-fit: cover;
+          }
+        }
+
+        .detail{
+          .position,.name-th{
+
+          }
+          .name-en{
+            font-size: .8em;
+            font-weight: 300;
+          }
+        }
+      }
+    }
+    .level2,.level3{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid $gray;
+      padding-bottom: 1em;
+      margin-bottom: 2em;
+
+      .item{
+        width: calc(100% / 2 - 30px);
+        text-align: center;
+        margin: 0 10px;
+        margin-bottom: 1em;
+
+        @media screen and (min-width:$md){
+          width: calc(100% / 3 - 30px);
+        }
+
+        figure{
+          display: flex;
+          justify-content: center;
+
+          img{
+            width: 113px;
+            height: 162px;
+            border-radius: 5px;
+            object-fit: cover;
+          }
+        }
+
+        .detail{
+          .position,.name-th{
+
+          }
+          .name-en{
+            font-size: .8em;
+            font-weight: 300;
+          }
+        }
+      }
+    }
+    .level3{
+      .item{
+        @media screen and (min-width:$md){
+          width: calc(100% / 4 - 40px);
+          margin: 0 20px;
+        }
+        @media screen and (min-width:$lg){
+          width: calc(100% / 4 - 10px);
+          margin: 0px 5px;
+        }
+      }
+    }
+  }
 }
 
 .staffpage{

@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
   <link rel="stylesheet" href="/css/style.min.css">
-  <link rel="stylesheet" href="/css/department.min.css">
+  <link rel="stylesheet" href="/css/member.min.css">
 </head>
 <body>
   <header class="bg-grad-green">
@@ -103,26 +103,181 @@
     </div>
 
     <section class="page">
-      <div class="departmentpage">
-        <div class="cover container">
-          <img src="/img/cover1.png" alt="">
-          <div class="head-title">
-            <h1>ประวัติภาควิชา</h1>
-          </div>
-        </div>
+      <div class="memberpage">
+        <div class="teacher container">
+          <div class="left">
+            <figure><img src="/img/cap.jpg" alt=""></figure>
 
-        <div class="ck container">
-          <p>ck</p>
-          <p>ck</p>
-          <p>ck</p>
-          <p>ck</p>
-          <p>ck</p>
-          <p>ck</p>
-          <p>ck</p>
-          <p>ck</p>
-          <p>ck</p>
-          <p>ck</p>
-          <p>ck</p>
+            <div class="button-upload"><button class="form-component button"><i class="fas fa-upload"></i> อัพโหลดภาพประจำตัว</button></div>
+
+            <div class="name">สุดสวย ในสามโลก</div>
+            <div class="name-en">assistant professor supinda koonme</div>
+            <div class="position">เจ้าหน้าที่ประจำแผนก</div>
+
+            <div class="reset-pass"><button class="form-component button bg-grad-green">ตั้งรหัสผ่านใหม่</button></div>
+
+            <div class="select-info">
+              <div class="select-menu active" onclick="switch_info(this,1)">ข้อมูลบุคลากร</div>
+              <div class="select-menu" onclick="switch_info(this,2)">ผลงานวิจัย</div>
+              <div class="select-menu" onclick="switch_info(this,3)">งานวิจัยที่สนใจ</div>
+            </div>
+          </div>
+          <div class="right">
+            <div class="form-data">
+              <div class="personal-box show">
+                <div class="select-tab">
+                  <div class="tab active" onclick="select_tab(this,1)">ข้อมูลอาจารย์</div>
+                  <div class="tab" onclick="select_tab(this,2)">ความเชี่ยวชาญ</div>
+                </div>
+
+                <div class="info-tab data-tab">
+                  <div class="input-box">
+                    <label for="">ชื่อ-สกุล (ภาษาไทย) *</label>
+                    <input type="text" class="form-component input">
+                  </div>
+    
+                  <div class="input-box">
+                    <label for="">ชื่อ-สกุล (ภาษาอังกฤษ) *</label>
+                    <input type="text" class="form-component input">
+                  </div>
+    
+                  <div class="input-box">
+                    <label for="">ตำแหน่ง *</label>
+                    <input type="text" class="form-component input">
+                  </div>
+    
+                  <div class="input-box">
+                    <label for="">โทรศัพท์ *</label>
+                    <input type="tel" class="form-component input">
+                  </div>
+    
+                  <div class="input-box">
+                    <label for="">มือถือ *</label>
+                    <input type="tel" class="form-component input">
+                  </div>
+    
+                  <div class="input-box">
+                    <label for="">อีเมล์ *</label>
+                    <input type="email" class="form-component input">
+                  </div>
+    
+                  <div class="input-box">
+                    <label for="">เวลาติดต่อ *</label>
+                    <input type="text" class="form-component input">
+                  </div>
+    
+                  <div class="input-box">
+                    <label for="">ติดต่อที่ *</label>
+                    <textarea name="" id="" class="form-component textarea" cols="30" rows="4"></textarea>
+                  </div>
+                </div>
+
+                <div class="edu-tab data-tab hidden">
+                  <div class="input-box">
+                    <label for="">เชี่ยวชาญ</label>
+                    <textarea name="" id="" class="form-component textarea" cols="30" rows="4"></textarea>
+                  </div>
+
+                  <p class="title-tab">จบการศึกษา</p>
+
+                  <div class="edu-list">
+                    <div class="list">
+                      <div class="input-box">
+                        <label for="">ปีสำเร็จการศึกษา</label>
+                        <input type="text">
+                      </div>
+
+                      <div class="input-box">
+                        <label for="">วุฒิการศึกษา</label>
+                        <input type="text">
+                      </div>
+
+                      <div class="input-box">
+                        <label for="">ชื่อสถาบัน</label>
+                        <input type="text">
+                      </div>
+
+                      <div class="input-box">
+                        <label for="">ประเทศ</label>
+                        <input type="text">
+                      </div>
+                    </div>
+
+                    <!-- ปุ่มเพิ่มการศึกษา -->
+                    <div class="add-edu"><i class="fas fa-plus-circle"></i></div>
+                  </div>
+                </div>
+
+                <div class="button-group">
+                  <button class="save form-component button">บันทึกข้อมูล</button>
+                  <button class="cancle form-component button">ยกเลิก</button>
+                </div>
+
+                <div class="bg"><img src="/img/logo/bg-green.png" alt=""></div>
+              </div>
+
+              <div class="research-box">
+                <div class="add-box"><button class="form-component button"><i class="fas fa-plus"></i> เพิ่มผลงานวิจัย</button></div>
+
+                <div class="box">
+                  <p class="title-content">ผลงานวิจัย</p>
+
+                  <div class="input-box">
+                    <label for="">ชื่อผลงานวิจัย *</label>
+                    <input type="text">
+                  </div>
+
+                  <div class="input-box">
+                    <label for="">ลิงค์งานวิจัย *</label>
+                    <input type="text">
+                  </div>
+
+                  <div class="input-box">
+                    <label for="">ผู้ร่วมงานวิจัย *</label>
+                    <input type="text">
+                  </div>
+
+                  <div class="upload-file">
+                    <label for="">ไฟล์งานวิจัย</label>
+                    <div class="zone-upload">
+                      <div class="preview"><img src="/img/image-default.png" alt=""></div>
+                      <div class="button-upload">
+                        <button class="form-component button">อัพโหลดไฟล์งาน</button>
+                        <div class="ps">
+                          <p>*หมายเหตุ</p>
+                          <p>-กรุณาอัพโหลดไฟล์งานที่มีสกุลไฟล์ Doc,PDF</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="button-save">
+                    <button class="form-component button">บันทึกข้อมูล</button>
+                    <button class="form-component button">ยกเลิก</button>
+                  </div>
+
+                  <div class="bg"><img src="/img/logo/bg-green.png" alt=""></div>
+                </div>
+              </div>
+
+              <div class="interest-box">
+                <div class="add-box"><button class="form-component button"><i class="fas fa-plus"></i> เพิ่มงานวิจัยที่สนใจ</button></div>
+
+                <div class="box">
+                  <p class="title-content">งานวิจัยที่สนใจ</p>
+
+                  <textarea name="" id="" class="form-component textarea" cols="30" rows="8"></textarea>
+
+                  <div class="button-save">
+                    <button class="form-component button">บันทึกข้อมูล</button>
+                    <button class="form-component button">ยกเลิก</button>
+                  </div>
+
+                  <div class="bg"><img src="/img/logo/bg-green.png" alt=""></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
   
@@ -238,5 +393,6 @@
 
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="/js/main.js"></script>
+  <script src="/js/member.js"></script>
 </body>
 </html>

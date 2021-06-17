@@ -1,0 +1,483 @@
+@import 'variable';
+
+.memberpage{
+  .officer,.teacher{
+    margin: 1em auto;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width:$md){
+      margin: 2em 3em;
+    }
+    @media screen and (min-width:$lg){
+      margin: 2em 8em;
+      flex-direction: row;
+    }
+    @media screen and (min-width:$xl){
+      margin: 2em auto;
+      width: 1016px;
+    }
+
+    .left{
+      @media screen and (min-width:$lg){
+        width: 271px;
+      }
+
+      figure{
+        display: flex;
+        justify-content: center;
+
+        img{
+          width: 217px;
+          height: 312px;
+          object-fit: cover;
+        }
+      }
+
+      .button-upload{
+        display: flex;
+        justify-content: center;
+        margin: 1em 0;
+
+        button{
+          background: $gray;
+          color: $white;
+
+          i{
+            margin-right: 5px;
+          }
+        }
+      }
+
+      .name{
+        font-size: 1.4em;
+        font-weight: 600;
+        text-align: center;
+      }
+      .name-en,.position{
+        font-size: .9em;
+        font-weight: 300;
+        text-align: center;
+      }
+      .name-en{
+        text-transform: uppercase;
+      }
+
+      .reset-pass{
+        margin: 1em 0;
+        display: flex;
+        justify-content: center;
+
+        button{
+          color: $white;
+
+          @media (hover:hover){
+            &:hover{
+              color: $green;
+              background: $white;
+              border: 1px solid $green;
+            }
+          }
+        }
+      }
+
+      .select-info{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin: 2em 0;
+        border: 1px solid $green;
+        padding: .5em 0;
+
+        @media screen and (min-width:$md){
+          flex-direction: column;
+          width: 250px;
+          height: max-content;
+          margin-right: 1em;
+          align-items: flex-start;
+          padding: .25em 0;
+        }
+
+        .select-menu{
+          cursor: pointer;
+          color: $green;
+          background: $white;
+          padding: .25em;
+
+          @media screen and (min-width:$md){
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px dashed $green;
+            margin: .25em 0;
+          }
+
+          &:last-child{
+            border-right: unset;
+          }
+
+          &.active{
+            background: linear-gradient($green,$lightgreen);
+            color: $white;
+            border-radius: 5px;
+            position: relative;
+
+            @media screen and (min-width:$md){
+              &:after{
+                font-family: "Font Awesome 5 Free"; 
+                font-weight: 900;
+                content: '\f0da';
+                position: absolute;
+                top: -13px;
+                right: -21px;
+                font-size: 3.4em;
+                color: $green;
+              }
+            }
+          }
+
+          @media (hover:hover){
+            &:hover{
+              background: linear-gradient($green,$lightgreen);
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+
+    .right{
+      @media screen and (min-width:$lg){
+        width: calc(100% - 271px);
+        padding-left: 20px;
+      }
+
+      .form-data{
+        position: relative;
+        padding: 1em;
+
+        @media screen and (min-width:$md){
+          padding: 2em;
+        }
+        @media screen and (min-width:$lg){
+          padding: 2em 3em;
+        }
+
+        h1{
+          font-size: 1.4em;
+          color: $white;
+          margin-bottom: 2em;
+        }
+
+        .input-box{
+          margin-bottom: 1em;
+
+          label{
+            color: $white;
+          }
+          input{
+            margin-top: .25em;
+          }
+        }
+
+        .button-group{
+          display: flex;
+          justify-content: center;
+
+          button{
+            margin: 0 1em;
+            color: $green;
+            background: $white;
+
+            @media (hover:hover){
+              &:hover{
+                color: $white;
+                background: $green;
+                border: 1px solid $green;
+              }
+            }
+          }
+        }
+
+        .bg{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+
+          img{
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .teacher{
+    .right{
+      .form-data{
+        position: inherit;
+        padding: 0;
+
+        .personal-box{
+          position: relative;
+          padding: 1em;
+
+          @media screen and (min-width:$md){
+            padding: 2em;
+          }
+          @media screen and (min-width:$lg){
+            padding: 2em 3em;
+          }
+
+          .select-tab{
+            display: flex;
+            align-items: center;
+            margin-bottom: 1em;
+
+            @media screen and (min-width:$xl){
+              margin-bottom: 2em;
+            }
+
+            .tab{
+              color: $white;
+              cursor: pointer;
+              margin-right: 1em;
+              
+              &:first-child{
+                position: relative;
+
+                &:after{
+                  content: '';
+                  position: absolute;
+                  top: 0;
+                  right: -10px;
+                  width: 1px;
+                  height: 100%;
+                  border-right: 1px solid $white;
+                }
+              }
+
+              &.active{
+                border-bottom: 1px solid $white;
+              }
+            }
+          }
+
+          .edu-tab{
+            .title-tab{
+              color: $white;
+              margin: 1em 0;
+              font-size: 1.2em;
+            }
+
+            .edu-list{
+              display: grid;
+              grid-template-columns: 100%;
+              grid-row-gap: 2em;
+
+              .list{
+                border-bottom: 1px solid $gray;
+                padding-bottom: 1em;
+
+                &:nth-last-child(2){
+                  border-bottom: unset;
+                  padding-bottom: 0;
+                }
+
+                @media screen and (min-width:$md){
+                  display: flex;
+                  flex-wrap: wrap;
+                }
+
+                >.input-box{
+                  margin-right: 10px;
+
+                  @media screen and (min-width:$md){
+                    &:nth-child(1){
+                      width: calc(100% / 2 - 180px);
+                    }
+                    &:nth-child(2){
+                      width: calc(100% / 2 - 30px);
+                    }
+                    &:nth-child(3){
+                      width: calc(100% / 2 - 30px);
+                    }
+                    &:nth-child(4){
+                      width: calc(100% / 2 - 30px);
+                    }
+                  }
+                  @media screen and (min-width:$lg){
+                    &:nth-child(1){
+                      width: calc(100% / 2 - 70px);
+                    }
+                  }
+                  @media screen and (min-width:$xl){
+                    &:nth-child(1){
+                      width: calc(100% / 4 - 40px);
+                    }
+                    &:nth-child(2){
+                      width: calc(100% / 4 - 10px);
+                    }
+                    &:nth-child(3){
+                      width: calc(100% / 4 + 10px);
+                    }
+                    &:nth-child(4){
+                      width: calc(100% / 4 - 10px);
+                    }
+                  }
+                }
+              }
+
+              .add-edu{
+                text-align: center;
+                margin-bottom: 2em;
+
+                i{
+                  color: $white;
+                  font-size: 2em;
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+
+          .bg{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+  
+            img{
+              width: 100%;
+              height: 100%;
+              border-radius: 10px;
+            }
+          }
+        }
+
+        .research-box,.interest-box{
+
+          .add-box{
+            button{
+              background: $green;
+              color: $white;
+              border: 1px solid $green;
+            }
+          }
+
+          >.box{
+            position: relative;
+            padding: 1em;
+            margin: 1em 0;
+  
+            @media screen and (min-width:$md){
+              padding: 2em;
+            }
+            @media screen and (min-width:$lg){
+              padding: 2em 3em;
+            }
+
+            .title-content{
+              color: $white;
+              font-size: 1.2em;
+              margin-bottom: 2em;
+            }
+
+            .upload-file{
+              label{
+                color: $white;
+              }
+
+              .zone-upload{
+                display: flex;
+                margin-top: 1em;
+                
+                .preview{
+                  img{
+                    max-width: 110px;
+                    max-height: 75px;
+                    border-radius: 5px;
+
+                    @media screen and (min-width:$md){
+                      max-width: 200px;
+                      max-height: 150px;
+                    }
+                  }
+                }
+
+                .button-upload{
+                  padding-left: 10px;
+
+                  @media screen and (min-width:$md){
+                    padding-left: 20px;
+                  }
+
+                  button{
+                    background: $black;
+                    color: $white;
+                    border: unset;
+                  }
+
+                  .ps{
+                    margin-top: .5em;
+
+                    p{
+                      color: $white;
+                      font-size: .6em;
+
+                      @media screen and (min-width:$md){
+                        font-size: .8em;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+            .button-save{
+              display: flex;
+              justify-content: center;
+              margin-top: 2em;
+
+              button{
+                background: $white;
+                color: $green;
+                border: unset;
+                margin: 0 1em;
+              }
+            }
+          }
+
+          .bg{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+  
+            img{
+              width: 100%;
+              height: 100%;
+              border-radius: 10px;
+            }
+          }
+        }
+
+        .personal-box,.research-box,.interest-box{
+          display: none;
+
+          &.show{
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
