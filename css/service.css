@@ -1,0 +1,348 @@
+.cover {
+  position: relative;
+  margin: 1em auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .cover {
+    margin: 2em 3em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .cover {
+    margin: 2em 8em;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .cover {
+    margin: 2em auto;
+    width: 1016px;
+  }
+}
+
+.cover .head-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.cover .head-title h1 {
+  color: #fff;
+  background: #1a921aad;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.25em 0;
+  text-shadow: 2px 2px 3px #0000007a;
+}
+
+@media screen and (min-width: 600px) {
+  .cover .head-title h1 {
+    font-size: 1.4em;
+  }
+}
+
+.servicepage .head-grid {
+  background: -webkit-gradient(linear, left top, right top, from(#1A921A), to(#56921A));
+  background: linear-gradient(to right, #1A921A, #56921A);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: .5em 1em;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .servicepage .head-grid {
+    margin: 2em 3em;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .servicepage .head-grid {
+    margin: 2em 8em;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .servicepage .head-grid {
+    margin: 2em auto;
+    width: 1016px;
+  }
+}
+
+.servicepage .head-grid .left span {
+  color: #fff;
+}
+
+.servicepage .head-grid .left span:first-child {
+  font-size: 1.2em;
+}
+
+.servicepage .head-grid .left span:last-child {
+  font-size: .9em;
+}
+
+.servicepage .head-grid .right .select-cate {
+  width: 200px;
+}
+
+.servicepage .head-grid .right .select-cate select {
+  border-radius: 20px;
+}
+
+.servicepage .grid-research {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  grid-row-gap: 3em;
+  justify-items: center;
+  margin: 1em auto;
+}
+
+@media screen and (min-width: 768px) {
+  .servicepage .grid-research {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 1em;
+    margin: 2em 3em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .servicepage .grid-research {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    margin: 2em 8em;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .servicepage .grid-research {
+    margin: 2em auto;
+    width: 1016px;
+  }
+}
+
+.servicepage .grid-research .box {
+  width: 243px;
+}
+
+@media (hover: hover) {
+  .servicepage .grid-research .box:hover figure img {
+    -webkit-transform: scale(1.4);
+            transform: scale(1.4);
+  }
+  .servicepage .grid-research .box:hover .detail .title {
+    color: #F46608;
+  }
+  .servicepage .grid-research .box:hover .detail .type span, .servicepage .grid-research .box:hover .detail .date span, .servicepage .grid-research .box:hover .detail .auther span {
+    color: #F46608;
+  }
+  .servicepage .grid-research .box:hover .detail .share a {
+    color: #F46608;
+  }
+}
+
+.servicepage .grid-research .box figure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+.servicepage .grid-research .box figure img {
+  width: 243px;
+  height: 243px;
+  border-radius: 5px 5px 0 0;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+.servicepage .grid-research .box .detail {
+  background: #f6f6f6;
+  border-radius: 0 0 5px 5px;
+  padding: .25em;
+}
+
+.servicepage .grid-research .box .detail .title {
+  font-size: 1em;
+  height: 3.2em;
+  overflow: hidden;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.servicepage .grid-research .box .detail .type span, .servicepage .grid-research .box .detail .date span, .servicepage .grid-research .box .detail .auther span {
+  font-size: .8em;
+  color: #A7A7A7;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.servicepage .grid-research .box .detail .share a {
+  color: #A7A7A7;
+  font-size: .8em;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.servicepage .content {
+  margin: 1em auto;
+}
+
+@media screen and (min-width: 768px) {
+  .servicepage .content {
+    margin: 2em 3em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .servicepage .content {
+    margin: 2em 8em;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .servicepage .content {
+    margin: 2em auto;
+    width: 1016px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .servicepage .content .ck-content .cover-research {
+    float: left;
+    padding-right: 2em;
+    padding-bottom: 1em;
+  }
+}
+
+.servicepage .content .ck-content .cover-research .accessibility {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: .5em;
+}
+
+@media screen and (min-width: 768px) {
+  .servicepage .content .ck-content .cover-research .accessibility {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+.servicepage .content .ck-content .cover-research .accessibility .share {
+  margin-right: 10px;
+}
+
+.servicepage .content .ck-content .cover-research .accessibility .share a {
+  color: #1A921A;
+}
+
+.servicepage .content .ck-content .cover-research .accessibility .share a i {
+  padding: .25em;
+  background: #1A921A;
+  color: #fff;
+  border-radius: 3px;
+}
+
+.servicepage .content .ck-content .cover-research .accessibility .date, .servicepage .content .ck-content .cover-research .accessibility .auther {
+  margin-right: 10px;
+  color: #1A921A;
+}
+
+.servicepage .content .ck-content .cover-research .accessibility .date i, .servicepage .content .ck-content .cover-research .accessibility .auther i {
+  padding: .25em;
+  background: #1A921A;
+  color: #fff;
+  border-radius: 3px;
+}
+
+.servicepage .content .ck-content p {
+  margin: 1em 0;
+  color: #A7A7A7;
+}
+
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin: 1em auto;
+  border-top: 1px solid #1A921A;
+  padding-top: 1em;
+}
+
+@media screen and (min-width: 768px) {
+  .pagination {
+    margin: 1em 3em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .pagination {
+    margin: 1em 8em;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .pagination {
+    margin: 2em auto;
+    width: 1016px;
+  }
+}
+
+.pagination li {
+  list-style: none;
+  padding: 0 .5em;
+}
+
+.pagination .page {
+  border-right: 1px solid #000;
+}
+
+.pagination .page.current {
+  color: #1A921A;
+}
+
+.pagination .page.current a {
+  border-bottom: 2px solid #1A921A;
+  font-weight: 600;
+}
+/*# sourceMappingURL=service.css.map */

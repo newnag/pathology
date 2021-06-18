@@ -1,0 +1,283 @@
+@import 'variable';
+
+.cover{
+  position: relative;
+  margin: 1em auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (min-width:$md){
+    margin: 2em 3em;
+  }
+  @media screen and (min-width:$lg){
+    margin: 2em 8em;
+  }
+  @media screen and (min-width:$xl){
+    margin: 2em auto;
+    width: 1016px;
+  }
+
+
+  .head-title{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: max-content;
+    
+    h1{
+      color: $white;
+      background: #1a921aad;
+      font-size: 1em;
+      text-align: center;
+      padding: 0.25em 0;
+      text-shadow: 2px 2px 3px #0000007a;
+      
+      @media screen and (min-width:$sm){
+        font-size: 1.4em;
+      }
+    }
+  }
+}
+
+.servicepage{
+  .head-grid{
+    background: linear-gradient(to right,$green,$lightgreen);
+    display: flex;
+    flex-direction: column;
+    padding: .5em 1em;
+    border-radius: 5px;
+
+    @media screen and (min-width:$md){
+      margin: 2em 3em;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    @media screen and (min-width:$lg){
+      margin: 2em 8em;
+    }
+    @media screen and (min-width:$xl){
+      margin: 2em auto;
+      width: 1016px;
+    }
+
+    .left{
+      span{
+        color: $white;
+
+        &:first-child{
+          font-size: 1.2em;
+        }
+        &:last-child{
+          font-size: .9em;
+        }
+      }
+    }
+
+    .right{
+      .select-cate{
+        width: 200px;
+
+        select{
+          border-radius: 20px;
+        }
+      }
+    }
+  }
+
+  .grid-research{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-row-gap: 3em;
+    justify-items: center;
+    margin: 1em auto;
+
+    @media screen and (min-width:$md){
+      grid-template-columns: repeat(2,1fr);
+      grid-column-gap: 1em;
+      margin: 2em 3em;
+    }
+    @media screen and (min-width:$lg){
+      grid-template-columns: repeat(3,1fr);
+      margin: 2em 8em;
+    }
+    @media screen and (min-width:$xl){
+      margin: 2em auto;
+      width: 1016px;
+    }
+
+    .box{
+      width: 243px;
+
+      @media (hover:hover){
+        &:hover{
+          figure{
+            img{
+              transform: scale(1.4);
+            }
+          }
+
+          .detail{
+            .title{
+              color: $orange;
+            }
+            .type,.date,.auther{
+              span{
+                color: $orange;
+              }
+            }
+            .share{
+              a{
+                color: $orange;
+              }
+            }
+          }
+        }
+      }
+
+      figure{
+        display: flex;
+        overflow: hidden;
+
+        img{
+          width: 243px;
+          height: 243px;
+          border-radius: 5px 5px 0 0;
+          transition: .5s ease-in-out;
+        }
+      }
+
+      .detail{
+        background: #f6f6f6;
+        border-radius: 0 0 5px 5px;
+        padding: .25em;
+
+        .title{
+          font-size: 1em;
+          height: 3.2em;
+          overflow: hidden;
+          transition: .2s ease-in-out;
+        }
+
+        .type,.date,.auther{
+          span{
+            font-size: .8em;
+            color: $gray;
+            transition: .2s ease-in-out;
+          }
+        }
+        .share{
+          a{
+            color: $gray;
+            font-size: .8em;
+            transition: .2s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+
+  .content{
+    margin: 1em auto;
+
+    @media screen and (min-width:$md){
+      margin: 2em 3em;
+    }
+    @media screen and (min-width:$lg){
+      margin: 2em 8em;
+    }
+    @media screen and (min-width:$xl){
+      margin: 2em auto;
+      width: 1016px;
+    }
+ 
+    .ck-content{
+      .cover-research{
+        @media screen and (min-width:$md){
+          float: left;
+          padding-right: 2em;
+          padding-bottom: 1em;
+        }
+
+        .accessibility{
+          display: flex;
+          justify-content: space-between;
+          margin-top: .5em;
+
+          @media screen and (min-width:$md){
+            justify-content: flex-start;
+          }
+  
+          .share{
+            margin-right: 10px;
+
+            a{
+              color: $green;
+    
+              i{
+                padding: .25em;
+                background: $green;
+                color: $white;
+                border-radius: 3px;
+              }
+            }
+          }
+          .date,.auther{
+            margin-right: 10px;
+            color: $green;
+      
+            i{
+              padding: .25em;
+              background: $green;
+              color: $white;
+              border-radius: 3px;
+            }
+          }
+        }
+      }
+
+      p{
+        margin: 1em 0;
+        color: $gray;
+      }
+    }
+  }
+}
+
+.pagination{
+  display: flex;
+  justify-content: flex-end;
+  margin: 1em auto;
+  border-top: 1px solid $green;
+  padding-top: 1em;
+
+  @media screen and (min-width:$md){
+    margin: 1em 3em;
+  }
+  @media screen and (min-width:$lg){
+    margin: 1em 8em;
+  }
+  @media screen and (min-width:$xl){
+    margin: 2em auto;
+    width: 1016px;
+  }
+
+  li{
+    list-style: none;
+    padding: 0 .5em;
+  }
+  .page{
+    border-right: 1px solid $black;
+
+    &.current{
+      color: $green;
+
+      a{
+        border-bottom: 2px solid $green;
+        font-weight: 600;
+      }
+    }
+  }
+}
